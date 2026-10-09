@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Products | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           DATA PRODUCTS
+        ========================= */
+
+        .data-page {
+            width: 88%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+
+        /* PRINCIPES */
+
+        .data-principles {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.12);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.12);
+        }
+
+
+        .data-principle {
+            padding: 35px 35px 35px 0;
+
+            border-right:
+                1px solid rgba(255, 255, 255, 0.08);
+        }
+
+
+        .data-principle:last-child {
+            border-right: none;
+        }
+
+
+        .data-principle span {
+            display: block;
+
+            margin-bottom: 20px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.16em;
+        }
+
+
+        .data-principle h3 {
+            margin: 0 0 15px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: 1.65rem;
+
+            font-weight: 500;
+        }
+
+
+        .data-principle p {
+            margin: 0;
+
+            color: #9eb0c2;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* WORKFLOW */
+
+        .data-workflow {
+            margin-top: 55px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+
+        .data-workflow-step {
+            padding: 28px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .data-workflow-step span {
+            display: block;
+
+            margin-bottom: 25px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.16em;
+        }
+
+
+        .data-workflow-step strong {
+            display: block;
+
+            margin-bottom: 12px;
+
+            color: #f4f7fb;
+
+            font-size: 1rem;
+
+            font-weight: 500;
+        }
+
+
+        .data-workflow-step p {
+            margin: 0;
+
+            color: #8fa2b5;
+
+            font-size: 0.9rem;
+
+            line-height: 1.65;
+        }
+
+
+
+        /* STATUT */
+
+        .data-status {
+            margin-top: 55px;
+
+            padding: 35px;
+
+            border-left: 2px solid #4fd8bd;
+
+            background:
+                rgba(79, 216, 189, 0.035);
+        }
+
+
+        .data-status p {
+            margin: 0;
+
+            color: #a8b8c9;
+
+            line-height: 1.8;
+        }
+
+
+        .data-status strong {
+            color: #4fd8bd;
+        }
+
+
+
+        @media (max-width: 950px) {
+
+            .data-principles {
+                grid-template-columns: 1fr;
+            }
+
+
+            .data-principle {
+                border-right: none;
+
+                border-bottom:
+                    1px solid rgba(255, 255, 255, 0.08);
+            }
+
+
+            .data-workflow {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .data-workflow {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+                <button
+                    id="projects-button"
+                    class="projects-button"
+                >
+                    Projets
+                    <span class="arrow">⌄</span>
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+
+            <span></span>
+
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- PAGE -->
+
+    <main class="data-page">
+
+
+        <!-- INTRO -->
+
+        <section class="econ-hero">
+
+            <p class="page-label">
+                DATA PRODUCTS · EN CONSTRUCTION
+            </p>
+
+
+            <h1>
+
+                De la donnée brute,<br>
+
+                <em>à un outil utile</em>
+
+            </h1>
+
+
+            <p class="econ-question">
+
+                Comment transformer une analyse en un outil
+                clair, accessible et réellement utile
+                pour comprendre une situation ou prendre une décision ?
+
+            </p>
+
+
+            <div class="econ-meta">
+
+
+                <div>
+
+                    <span>OBJECTIF</span>
+
+                    <strong>
+                        Aide à la décision
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>APPROCHE</span>
+
+                    <strong>
+                        Analyse · Visualisation
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>FORMAT</span>
+
+                    <strong>
+                        Dashboard · Outil interactif
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>STATUT</span>
+
+                    <strong>
+                        En construction
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- IDÉE -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    L’IDÉE
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Une analyse devient vraiment utile
+                    lorsqu’elle peut être comprise
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Produire un modèle ou calculer un indicateur
+                        n’est qu’une partie du travail.
+
+                    </p>
+
+
+                    <p>
+
+                        Les résultats doivent ensuite pouvoir être
+                        organisés, visualisés et présentés
+                        de manière suffisamment claire
+                        pour qu’une autre personne puisse les utiliser.
+
+                    </p>
+
+
+                    <p>
+
+                        C’est cette étape qui m’intéresse ici :
+                        transformer des données et des analyses
+                        en <strong>outils simples d’aide à la décision</strong>.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- PRINCIPES -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    CE QUE JE VEUX CONSTRUIRE
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Des outils qui répondent
+                    à une vraie question
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        L’objectif n’est pas de construire
+                        un dashboard uniquement pour afficher
+                        le plus de graphiques possible.
+
+                    </p>
+
+
+                    <p>
+
+                        Chaque élément doit permettre
+                        de répondre rapidement
+                        à une question précise
+                        ou d’identifier une information importante.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="data-principles">
+
+
+                <div class="data-principle">
+
+                    <span>01</span>
+
+                    <h3>
+                        Comprendre
+                    </h3>
+
+                    <p>
+
+                        Faire ressortir les tendances,
+                        évolutions et différences importantes
+                        présentes dans les données.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="data-principle">
+
+                    <span>02</span>
+
+                    <h3>
+                        Comparer
+                    </h3>
+
+                    <p>
+
+                        Permettre de comparer rapidement
+                        plusieurs périodes, catégories
+                        ou indicateurs.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="data-principle">
+
+                    <span>03</span>
+
+                    <h3>
+                        Décider
+                    </h3>
+
+                    <p>
+
+                        Transformer les résultats
+                        en informations suffisamment claires
+                        pour orienter une décision.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- WORKFLOW -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    DU FICHIER BRUT AU PRODUIT
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Construire toute la chaîne,
+                    pas uniquement la visualisation
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Un data product commence avant
+                        la création des graphiques.
+
+                    </p>
+
+
+                    <p>
+
+                        Je souhaite développer des projets
+                        qui couvrent progressivement
+                        tout le processus :
+                        préparation des données,
+                        analyse, choix des indicateurs
+                        et restitution finale.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="data-workflow">
+
+
+                <div class="data-workflow-step">
+
+                    <span>01</span>
+
+                    <strong>
+                        Collecter
+                    </strong>
+
+                    <p>
+
+                        Identifier les données réellement
+                        nécessaires à la question étudiée.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="data-workflow-step">
+
+                    <span>02</span>
+
+                    <strong>
+                        Préparer
+                    </strong>
+
+                    <p>
+
+                        Nettoyer, structurer
+                        et vérifier la qualité
+                        des données utilisées.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="data-workflow-step">
+
+                    <span>03</span>
+
+                    <strong>
+                        Analyser
+                    </strong>
+
+                    <p>
+
+                        Construire les indicateurs
+                        et analyses permettant
+                        de répondre au problème.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="data-workflow-step">
+
+                    <span>04</span>
+
+                    <strong>
+                        Restituer
+                    </strong>
+
+                    <p>
+
+                        Présenter les résultats
+                        sous une forme simple,
+                        lisible et interactive.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- DIFFÉRENCE -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    ANALYSE VS DATA PRODUCT
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Aller au-delà
+                    d’un résultat ponctuel
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Une analyse classique répond généralement
+                        à une question à un instant donné.
+
+                    </p>
+
+
+                    <p>
+
+                        Un data product peut aller plus loin :
+                        les données peuvent être actualisées,
+                        filtrées ou explorées
+                        par une autre personne
+                        sans devoir refaire toute l’analyse.
+
+                    </p>
+
+
+                    <p>
+
+                        L’objectif est donc de créer
+                        une interface entre
+                        <strong>les données, l’analyse
+                        et la personne qui doit les utiliser</strong>.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- STATUT -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    OÙ EN EST LE PROJET ?
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Le premier produit
+                    reste à construire
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Cette partie de mon portfolio
+                        est encore en développement.
+
+                    </p>
+
+
+                    <p>
+
+                        Je souhaite y ajouter progressivement
+                        des projets où l’analyse ne se termine
+                        pas par un notebook ou un rapport,
+                        mais par un outil directement utilisable.
+
+                    </p>
+
+
+                    <p>
+
+                        Les prochains projets permettront
+                        notamment d’explorer davantage
+                        les dashboards, les indicateurs interactifs
+                        et la visualisation de données.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="data-status">
+
+                <p>
+
+                    <strong>Prochaine étape :</strong>
+                    sélectionner un cas d’usage concret,
+                    construire le premier prototype
+                    et documenter ici les choix réalisés,
+                    de la préparation des données
+                    jusqu’à l’interface finale.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- CONCLUSION -->
+
+        <section class="econ-conclusion">
+
+
+            <p class="page-label">
+                EN CONSTRUCTION
+            </p>
+
+
+            <h2>
+
+                Ne pas seulement analyser,
+
+                <em>rendre l’analyse utilisable</em>
+
+            </h2>
+
+
+            <p>
+
+                Cette section est destinée
+                aux projets qui combinent
+                traitement de données,
+                analyse et restitution visuelle.
+
+            </p>
+
+
+            <p>
+
+                Elle évoluera avec mes prochains projets
+                et accueillera progressivement
+                des outils interactifs construits
+                autour de problèmes concrets.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

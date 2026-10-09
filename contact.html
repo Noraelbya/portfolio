@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        /* =========================
+           CONTACT PAGE
+        ========================= */
+
+        .contact-page {
+            width: 88%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 85px 0 120px;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .contact-intro {
+            padding-bottom: 65px;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .contact-intro h1 {
+            margin: 22px 0 28px;
+
+            max-width: 950px;
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(3.8rem, 7vw, 6.8rem);
+
+            line-height: 0.98;
+
+            font-weight: 500;
+
+            color: #f4f7fb;
+        }
+
+
+        .contact-intro h1 em {
+            color: #55b9f3;
+
+            font-style: normal;
+        }
+
+
+        .contact-intro-text {
+            max-width: 700px;
+
+            margin: 0;
+
+            color: #9eb0c2;
+
+            font-size: 1.05rem;
+
+            line-height: 1.8;
+        }
+
+
+
+        /* =========================
+           CONTACT GRID
+        ========================= */
+
+        .contact-grid {
+            margin-top: 70px;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.15fr)
+                minmax(0, 0.85fr);
+
+            gap: 24px;
+        }
+
+
+        .contact-main-card,
+        .contact-option {
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+
+        /* =========================
+           MAIN EMAIL CARD
+        ========================= */
+
+        .contact-main-card {
+            min-height: 500px;
+
+            padding: 48px;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .contact-label {
+            margin: 0 0 45px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.18em;
+        }
+
+
+        .contact-main-card h2 {
+            margin: 0 0 20px;
+
+            max-width: 700px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(2.7rem, 5vw, 4.7rem);
+
+            line-height: 1;
+
+            font-weight: 500;
+        }
+
+
+        .contact-main-card h2 em {
+            color: #55b9f3;
+
+            font-style: normal;
+        }
+
+
+        .contact-main-card > p {
+            max-width: 630px;
+
+            margin: 0;
+
+            color: #9eb0c2;
+
+            line-height: 1.8;
+        }
+
+
+        .contact-email {
+            margin-top: auto;
+
+            padding-top: 55px;
+        }
+
+
+        .contact-email small {
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: #71869b;
+
+            font-size: 0.7rem;
+
+            letter-spacing: 0.16em;
+        }
+
+
+        .contact-email-address {
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+            text-decoration: none;
+
+            transition: color 0.25s ease;
+        }
+
+
+        .contact-email-address:hover {
+            color: #4fd8bd;
+        }
+
+
+        .contact-actions {
+            margin-top: 28px;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .contact-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            padding: 14px 20px;
+
+            border:
+                1px solid rgba(79, 216, 189, 0.5);
+
+            background: transparent;
+
+            color: #f4f7fb;
+
+            font: inherit;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .contact-button:hover {
+            background: #4fd8bd;
+
+            color: #07121d;
+
+            transform: translateY(-2px);
+        }
+
+
+        .contact-button-secondary {
+            border-color:
+                rgba(255, 255, 255, 0.15);
+        }
+
+
+        .contact-button-secondary:hover {
+            background:
+                rgba(255, 255, 255, 0.07);
+
+            color: #f4f7fb;
+        }
+
+
+
+        /* =========================
+           OPTIONS
+        ========================= */
+
+        .contact-options {
+            display: grid;
+
+            grid-template-rows: 1fr 1fr;
+
+            gap: 24px;
+        }
+
+
+        .contact-option {
+            padding: 35px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+        }
+
+
+        .contact-option:hover {
+            transform: translateY(-4px);
+
+            border-color:
+                rgba(79, 216, 189, 0.45);
+
+            background:
+                rgba(255, 255, 255, 0.02);
+        }
+
+
+        .contact-option-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 38px;
+        }
+
+
+        .contact-option-label {
+            margin: 0;
+
+            color: #4fd8bd;
+
+            font-size: 0.7rem;
+
+            letter-spacing: 0.17em;
+        }
+
+
+        .contact-arrow {
+            color: #4fd8bd;
+
+            font-size: 1.7rem;
+        }
+
+
+        .contact-option h3 {
+            margin: 0 0 15px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: 1.8rem;
+
+            font-weight: 500;
+        }
+
+
+        .contact-option p {
+            margin: 0;
+
+            color: #9eb0c2;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* =========================
+           BOTTOM
+        ========================= */
+
+        .contact-bottom {
+            margin-top: 80px;
+
+            padding-top: 30px;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.1);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .contact-bottom p {
+            margin: 0;
+
+            color: #71869b;
+
+            font-size: 0.9rem;
+        }
+
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-main-card {
+                min-height: 430px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .contact-page {
+                padding-top: 55px;
+            }
+
+
+            .contact-main-card {
+                padding: 30px;
+
+                min-height: 420px;
+            }
+
+
+            .contact-options {
+                grid-template-rows: auto;
+            }
+
+
+            .contact-option {
+                padding: 30px;
+            }
+
+
+            .contact-actions {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+
+            .contact-bottom {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+                <button
+                    id="projects-button"
+                    class="projects-button"
+                >
+                    Projets
+
+                    <span class="arrow">
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="nav-active"
+            >
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+
+            <span></span>
+
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+
+    <!-- ================= PAGE ================= -->
+
+    <main class="contact-page">
+
+
+        <!-- INTRO -->
+
+        <section class="contact-intro">
+
+
+            <p class="page-label">
+                CONTACT
+            </p>
+
+
+            <h1>
+
+                Une idée,<br>
+
+                <em>un projet, un échange ?</em>
+
+            </h1>
+
+
+            <p class="contact-intro-text">
+
+                Pour une opportunité professionnelle,
+                une discussion autour de la data,
+                de l’économétrie ou de la recherche,
+                vous pouvez me contacter directement par email.
+
+            </p>
+
+
+        </section>
+
+
+
+
+        <!-- CONTACT -->
+
+        <section class="contact-grid">
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-main-card">
+
+
+                <p class="contact-label">
+                    CONTACT DIRECT
+                </p>
+
+
+                <h2>
+
+                    Le plus simple :<br>
+
+                    <em>m’écrire directement.</em>
+
+                </h2>
+
+
+                <p>
+
+                    Je réponds volontiers aux propositions,
+                    questions et échanges liés à mes projets,
+                    à la data, à l’analyse quantitative
+                    ou aux réseaux économiques.
+
+                </p>
+
+
+                <div class="contact-email">
+
+
+                    <small>
+                        EMAIL
+                    </small>
+
+
+                    <a
+                        href="mailto:noraelbya@icloud.com"
+                        class="contact-email-address"
+                    >
+                        noraelbya@icloud.com
+                    </a>
+
+
+                    <div class="contact-actions">
+
+
+                        <a
+                            href="mailto:noraelbya@icloud.com"
+                            class="contact-button"
+                        >
+                            Envoyer un email
+                            <span>→</span>
+                        </a>
+
+
+                        <button
+                            type="button"
+                            class="contact-button contact-button-secondary"
+                            id="copy-email"
+                        >
+                            Copier l’adresse
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- OPTIONS -->
+
+            <div class="contact-options">
+
+
+                <!-- PROFESSIONAL -->
+
+                <a
+                    href="mailto:noraelbya@icloud.com?subject=Opportunité%20professionnelle"
+                    class="contact-option"
+                >
+
+
+                    <div class="contact-option-top">
+
+                        <p class="contact-option-label">
+                            OPPORTUNITÉ
+                        </p>
+
+
+                        <span class="contact-arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Échange professionnel
+                    </h3>
+
+
+                    <p>
+
+                        Stage, alternance, mission,
+                        projet data ou opportunité
+                        en analyse quantitative.
+
+                    </p>
+
+
+                </a>
+
+
+
+
+                <!-- RESEARCH -->
+
+                <a
+                    href="mailto:noraelbya@icloud.com?subject=Discussion%20autour%20des%20réseaux%20économiques"
+                    class="contact-option"
+                >
+
+
+                    <div class="contact-option-top">
+
+                        <p class="contact-option-label">
+                            RECHERCHE
+                        </p>
+
+
+                        <span class="contact-arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Discussion de recherche
+                    </h3>
+
+
+                    <p>
+
+                        Réseaux économiques,
+                        propagation des chocs,
+                        données ou simplement
+                        une idée à partager.
+
+                    </p>
+
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- BOTTOM -->
+
+        <section class="contact-bottom">
+
+
+            <p>
+                Nora EL BYA · Économétrie · Data · Modélisation
+            </p>
+
+
+            <p>
+                France
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        const copyEmailButton =
+            document.getElementById("copy-email");
+
+
+        if (copyEmailButton) {
+
+            copyEmailButton.addEventListener(
+                "click",
+                async () => {
+
+                    const email =
+                        "noraelbya@icloud.com";
+
+
+                    try {
+
+                        await navigator.clipboard.writeText(email);
+
+                        copyEmailButton.textContent =
+                            "Adresse copiée ✓";
+
+
+                        setTimeout(() => {
+
+                            copyEmailButton.textContent =
+                                "Copier l’adresse";
+
+                        }, 1800);
+
+
+                    } catch (error) {
+
+                        copyEmailButton.textContent =
+                            email;
+
+                    }
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

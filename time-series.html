@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Séries temporelles | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           TIME SERIES
+        ========================= */
+
+        .ts-page {
+            width: 88%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+
+        /* ÉTAPES DU PROJET */
+
+        .ts-steps {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.12);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.12);
+        }
+
+
+        .ts-step {
+            padding: 30px 28px 30px 0;
+
+            border-right:
+                1px solid rgba(255, 255, 255, 0.08);
+        }
+
+
+        .ts-step:last-child {
+            border-right: none;
+        }
+
+
+        .ts-step span {
+            display: block;
+
+            margin-bottom: 16px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.16em;
+        }
+
+
+        .ts-step strong {
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: #f4f7fb;
+
+            font-size: 1rem;
+
+            font-weight: 500;
+        }
+
+
+        .ts-step p {
+            margin: 0;
+
+            color: #8fa2b5;
+
+            font-size: 0.9rem;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* MÉTHODES */
+
+        .ts-methods {
+            margin-top: 55px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .ts-method {
+            padding: 30px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .ts-method span {
+            display: block;
+
+            margin-bottom: 15px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.16em;
+        }
+
+
+        .ts-method h3 {
+            margin: 0 0 15px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: 1.7rem;
+
+            font-weight: 500;
+        }
+
+
+        .ts-method p {
+            margin: 0;
+
+            color: #9eb0c2;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* STATUT */
+
+        .ts-status {
+            margin-top: 55px;
+
+            padding: 35px;
+
+            border-left: 2px solid #4fd8bd;
+
+            background:
+                rgba(79, 216, 189, 0.035);
+        }
+
+
+        .ts-status strong {
+            color: #4fd8bd;
+        }
+
+
+        .ts-status p {
+            margin: 0;
+
+            color: #a8b8c9;
+
+            line-height: 1.8;
+        }
+
+
+
+        @media (max-width: 900px) {
+
+            .ts-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .ts-methods {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .ts-steps {
+                grid-template-columns: 1fr;
+            }
+
+
+            .ts-step {
+                border-right: none;
+
+                border-bottom:
+                    1px solid rgba(255, 255, 255, 0.08);
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+                <button
+                    id="projects-button"
+                    class="projects-button"
+                >
+                    Projets
+                    <span class="arrow">⌄</span>
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+
+            <span></span>
+
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+
+    <!-- PAGE -->
+
+    <main class="ts-page">
+
+
+        <!-- INTRO -->
+
+        <section class="econ-hero">
+
+
+            <p class="page-label">
+                SÉRIES TEMPORELLES · PROJET EN COURS
+            </p>
+
+
+            <h1>
+
+                Comprendre le passé,<br>
+
+                <em>pour mieux prévoir</em>
+
+            </h1>
+
+
+            <p class="econ-question">
+
+                Comment identifier la dynamique d’une série,
+                choisir un modèle adapté et évaluer
+                sa capacité à prévoir les observations futures ?
+
+            </p>
+
+
+            <div class="econ-meta">
+
+
+                <div>
+
+                    <span>DOMAINE</span>
+
+                    <strong>
+                        Séries temporelles
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>OBJECTIF</span>
+
+                    <strong>
+                        Modélisation & prévision
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>MÉTHODES</span>
+
+                    <strong>
+                        AR · ARMA · modèles non linéaires
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>STATUT</span>
+
+                    <strong>
+                        En cours
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- QUESTION -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    L’OBJECTIF
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Une série temporelle
+                    contient sa propre histoire
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Contrairement à des observations indépendantes,
+                        une série temporelle possède une structure :
+                        ce qui se passe aujourd’hui peut dépendre
+                        de ce qui s’est passé auparavant.
+
+                    </p>
+
+
+                    <p>
+
+                        L’objectif du projet est de partir
+                        d’une série observée dans le temps,
+                        d’en identifier la dynamique,
+                        puis de construire un modèle capable
+                        de reproduire cette structure.
+
+                    </p>
+
+
+                    <p>
+
+                        La dernière étape consiste à vérifier
+                        si le modèle choisi permet réellement
+                        de produire des prévisions utiles
+                        sur de nouvelles observations.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- DÉMARCHE -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    MA DÉMARCHE
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    De l’identification
+                    à la prévision
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Je construis progressivement l’analyse
+                        en séparant le problème en plusieurs étapes :
+                        comprendre la série, identifier un modèle,
+                        vérifier sa qualité puis évaluer
+                        ses performances prédictives.
+
+                    </p>
+
+
+                    <p>
+
+                        Cette démarche permet d’éviter
+                        de sélectionner un modèle uniquement
+                        parce qu’il semble bien ajuster
+                        les observations passées.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="ts-steps">
+
+
+                <div class="ts-step">
+
+                    <span>01</span>
+
+                    <strong>
+                        Observer
+                    </strong>
+
+                    <p>
+                        Examiner la dynamique de la série
+                        et repérer les structures possibles.
+                    </p>
+
+                </div>
+
+
+
+                <div class="ts-step">
+
+                    <span>02</span>
+
+                    <strong>
+                        Identifier
+                    </strong>
+
+                    <p>
+                        Tester différentes structures
+                        et choisir des retards pertinents.
+                    </p>
+
+                </div>
+
+
+
+                <div class="ts-step">
+
+                    <span>03</span>
+
+                    <strong>
+                        Diagnostiquer
+                    </strong>
+
+                    <p>
+                        Vérifier que les résidus
+                        ne conservent pas de structure importante.
+                    </p>
+
+                </div>
+
+
+
+                <div class="ts-step">
+
+                    <span>04</span>
+
+                    <strong>
+                        Prévoir
+                    </strong>
+
+                    <p>
+                        Comparer les prévisions aux valeurs
+                        réellement observées.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- MODÈLES -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    MODÈLES EXPLORÉS
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Commencer simple,
+                    puis tester la non-linéarité
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        L’analyse commence avec des modèles linéaires
+                        afin de construire une référence simple
+                        avant d’introduire éventuellement
+                        des dynamiques plus complexes.
+
+                    </p>
+
+
+                    <p>
+
+                        L’objectif n’est pas d’utiliser
+                        le modèle le plus sophistiqué,
+                        mais de déterminer si la complexité supplémentaire
+                        apporte réellement une meilleure description
+                        ou de meilleures prévisions.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="ts-methods">
+
+
+                <div class="ts-method">
+
+                    <span>MODÈLES LINÉAIRES</span>
+
+                    <h3>
+                        AR & ARMA
+                    </h3>
+
+                    <p>
+
+                        Modéliser la dépendance entre une observation
+                        et ses valeurs passées,
+                        puis sélectionner une structure adaptée
+                        à partir des données.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="ts-method">
+
+                    <span>MODÈLES NON LINÉAIRES</span>
+
+                    <h3>
+                        SETAR & STAR
+                    </h3>
+
+                    <p>
+
+                        Explorer la possibilité que la dynamique
+                        change selon le niveau de la série
+                        ou selon différents régimes.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- SÉLECTION -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    COMMENT CHOISIR ?
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Un bon ajustement
+                    ne suffit pas
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Plusieurs modèles peuvent sembler
+                        correctement représenter une série
+                        sur les données utilisées pour l’estimation.
+
+                    </p>
+
+
+                    <p>
+
+                        Je compare donc les spécifications
+                        à l’aide de critères comme
+                        <strong>AIC et BIC</strong>,
+                        mais également à partir
+                        de l’analyse des résidus.
+
+                    </p>
+
+
+                    <p>
+
+                        L’objectif est notamment de vérifier
+                        qu’il ne reste pas de structure évidente
+                        que le modèle n’aurait pas captée.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- DIAGNOSTIC -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    DIAGNOSTIC
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Ce que les erreurs
+                    peuvent encore raconter
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Après l’estimation,
+                        l’analyse ne s’arrête pas
+                        aux coefficients du modèle.
+
+                    </p>
+
+
+                    <p>
+
+                        Les résidus permettent de vérifier
+                        si une structure temporelle importante
+                        reste encore présente
+                        dans les erreurs de prédiction.
+
+                    </p>
+
+
+                    <p>
+
+                        Des outils graphiques et statistiques
+                        peuvent ensuite être utilisés
+                        pour étudier leur comportement
+                        et évaluer la qualité de la spécification.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- STATUT -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    OÙ EN EST LE PROJET ?
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Une analyse
+                    en construction
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Le projet est encore en cours
+                        et l’application empirique
+                        n’est pas suffisamment avancée
+                        pour présenter des résultats définitifs.
+
+                    </p>
+
+
+                    <p>
+
+                        La démarche de modélisation
+                        et les différentes familles de modèles
+                        sont actuellement explorées
+                        avant de retenir une spécification finale.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="ts-status">
+
+                <p>
+
+                    <strong>Prochaine étape :</strong>
+                    finaliser l’application empirique,
+                    comparer les modèles sur les mêmes données
+                    et évaluer leurs performances de prévision
+                    sur des observations non utilisées
+                    lors de l’estimation.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+
+        <!-- CONCLUSION -->
+
+        <section class="econ-conclusion">
+
+
+            <p class="page-label">
+                PROJET EN COURS
+            </p>
+
+
+            <h2>
+
+                Modéliser une série,
+                <em>puis vérifier qu’elle prédit vraiment</em>
+
+            </h2>
+
+
+            <p>
+
+                Ce projet me permet d’explorer
+                l’ensemble du processus d’analyse
+                d’une série temporelle :
+                identification, estimation,
+                diagnostic et prévision.
+
+            </p>
+
+
+            <p>
+
+                Les résultats seront ajoutés progressivement
+                lorsque l’application empirique
+                et la comparaison des modèles
+                seront suffisamment avancées.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

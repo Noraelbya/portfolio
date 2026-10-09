@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recherche & réseaux | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           RESEARCH & NETWORKS
+        ========================= */
+
+        .research-page {
+            width: 88%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+
+        /* QUESTIONS */
+
+        .research-questions {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.12);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.12);
+        }
+
+
+        .research-question {
+            padding: 35px 35px 35px 0;
+
+            border-right:
+                1px solid rgba(255, 255, 255, 0.08);
+        }
+
+
+        .research-question:last-child {
+            border-right: none;
+        }
+
+
+        .research-question span {
+            display: block;
+
+            margin-bottom: 18px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.16em;
+        }
+
+
+        .research-question h3 {
+            margin: 0 0 15px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: 1.6rem;
+
+            font-weight: 500;
+        }
+
+
+        .research-question p {
+            margin: 0;
+
+            color: #9eb0c2;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* APPLICATIONS */
+
+        .research-applications {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .research-application {
+            min-height: 250px;
+
+            padding: 30px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+
+            display: flex;
+            flex-direction: column;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+        }
+
+
+        .research-application:hover {
+            transform: translateY(-5px);
+
+            border-color:
+                rgba(79, 216, 189, 0.45);
+
+            background:
+                rgba(255, 255, 255, 0.02);
+        }
+
+
+        .research-application span {
+            display: block;
+
+            margin-bottom: 25px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.15em;
+        }
+
+
+        .research-application h3 {
+            margin: 0 0 15px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: 1.65rem;
+
+            font-weight: 500;
+        }
+
+
+        .research-application p {
+            margin: 0;
+
+            color: #9eb0c2;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* APPROCHE */
+
+        .research-flow {
+            margin-top: 55px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 14px;
+        }
+
+
+        .research-flow-step {
+            padding: 28px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .research-flow-step span {
+            display: block;
+
+            margin-bottom: 22px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.16em;
+        }
+
+
+        .research-flow-step strong {
+            display: block;
+
+            margin-bottom: 12px;
+
+            color: #f4f7fb;
+
+            font-size: 1rem;
+
+            font-weight: 500;
+        }
+
+
+        .research-flow-step p {
+            margin: 0;
+
+            color: #8fa2b5;
+
+            font-size: 0.9rem;
+
+            line-height: 1.65;
+        }
+
+
+
+        /* CONTACT RECHERCHE */
+
+        .research-contact {
+            margin-top: 90px;
+
+            padding: 55px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.12);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 50px;
+        }
+
+
+        .research-contact-text {
+            max-width: 700px;
+        }
+
+
+        .research-contact-label {
+            margin: 0 0 18px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.18em;
+        }
+
+
+        .research-contact h2 {
+            margin: 0 0 18px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(2rem, 4vw, 3.5rem);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+        }
+
+
+        .research-contact h2 em {
+            color: #55b9f3;
+            font-style: normal;
+        }
+
+
+        .research-contact p {
+            margin: 0;
+
+            color: #9eb0c2;
+
+            line-height: 1.8;
+        }
+
+
+        .research-contact a {
+            flex-shrink: 0;
+
+            padding: 16px 24px;
+
+            border:
+                1px solid rgba(79, 216, 189, 0.55);
+
+            color: #f4f7fb;
+
+            text-decoration: none;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .research-contact a:hover {
+            background: #4fd8bd;
+            color: #07121d;
+
+            transform: translateY(-2px);
+        }
+
+
+
+        @media (max-width: 1000px) {
+
+            .research-applications {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .research-flow {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .research-questions {
+                grid-template-columns: 1fr;
+            }
+
+
+            .research-question {
+                border-right: none;
+
+                border-bottom:
+                    1px solid rgba(255, 255, 255, 0.08);
+            }
+
+
+            .research-contact {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .research-applications,
+            .research-flow {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+                <button
+                    id="projects-button"
+                    class="projects-button"
+                >
+                    Projets
+                    <span class="arrow">⌄</span>
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+
+            <span></span>
+
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- PAGE -->
+
+    <main class="research-page">
+
+
+        <!-- INTRO -->
+
+        <section class="econ-hero">
+
+            <p class="page-label">
+                RECHERCHE & RÉSEAUX
+            </p>
+
+
+            <h1>
+
+                Comment les réseaux<br>
+
+                <em>réagissent-ils aux chocs ?</em>
+
+            </h1>
+
+
+            <p class="econ-question">
+
+                Je m’intéresse à la manière dont les réseaux économiques
+                évoluent lorsqu’ils sont confrontés à une perturbation :
+                quelles relations disparaissent, lesquelles se reforment
+                et comment la structure du réseau s’adapte.
+
+            </p>
+
+
+            <div class="econ-meta">
+
+
+                <div>
+
+                    <span>THÈME</span>
+
+                    <strong>
+                        Réseaux économiques
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>QUESTION</span>
+
+                    <strong>
+                        Dynamique après choc
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>ANGLE</span>
+
+                    <strong>
+                        Résilience & adaptation
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>APPROCHE</span>
+
+                    <strong>
+                        Empirique · quantitative
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- QUESTION CENTRALE -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    CE QUI M’INTÉRESSE
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Observer ce qui se passe
+                    après une perturbation
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Les réseaux économiques ne sont pas figés.
+                        Entreprises, fournisseurs, infrastructures
+                        ou institutions sont reliés par des relations
+                        qui peuvent évoluer dans le temps.
+
+                    </p>
+
+
+                    <p>
+
+                        Lorsqu’un choc survient,
+                        certaines connexions peuvent disparaître,
+                        de nouveaux liens peuvent apparaître
+                        et certains acteurs peuvent devenir
+                        plus ou moins importants dans le réseau.
+
+                    </p>
+
+
+                    <p>
+
+                        Ce sont ces transformations
+                        qui m’intéressent :
+                        comprendre non seulement
+                        l’effet immédiat d’un choc,
+                        mais aussi la manière dont
+                        <strong>le réseau se réorganise ensuite</strong>.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- QUESTIONS -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    QUESTIONS QUE J’EXPLORE
+                </p>
+
+            </div>
+
+
+            <div class="research-questions">
+
+
+                <div class="research-question">
+
+                    <span>01</span>
+
+                    <h3>
+                        Quels liens disparaissent ?
+                    </h3>
+
+                    <p>
+
+                        Identifier les relations les plus fragiles
+                        lorsqu’un réseau est confronté
+                        à une perturbation importante.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="research-question">
+
+                    <span>02</span>
+
+                    <h3>
+                        Comment le réseau se reforme ?
+                    </h3>
+
+                    <p>
+
+                        Observer l’apparition de nouvelles connexions
+                        et les stratégies d’adaptation
+                        mises en place après le choc.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="research-question">
+
+                    <span>03</span>
+
+                    <h3>
+                        Qu’est-ce qui rend un réseau résilient ?
+                    </h3>
+
+                    <p>
+
+                        Comprendre si certaines structures
+                        permettent de mieux absorber
+                        ou de mieux dépasser une perturbation.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- APPLICATIONS -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    TERRAINS D’APPLICATION
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Une même question,
+                    plusieurs terrains possibles
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Je n’ai pas encore limité cette réflexion
+                        à une application unique.
+
+                    </p>
+
+
+                    <p>
+
+                        Plusieurs domaines peuvent permettre
+                        d’étudier la manière dont un réseau
+                        évolue après un choc,
+                        avec des mécanismes et des données différents.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="research-applications">
+
+
+                <div class="research-application">
+
+                    <span>01</span>
+
+                    <h3>
+                        Supply chains
+                    </h3>
+
+                    <p>
+
+                        Étudier comment des relations
+                        entre fournisseurs et entreprises
+                        se réorganisent après une rupture
+                        de production ou d’approvisionnement.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="research-application">
+
+                    <span>02</span>
+
+                    <h3>
+                        Énergie
+                    </h3>
+
+                    <p>
+
+                        Observer comment un choc sur les prix,
+                        l’offre ou les infrastructures
+                        peut se transmettre à travers
+                        un réseau économique.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="research-application">
+
+                    <span>03</span>
+
+                    <h3>
+                        Transport
+                    </h3>
+
+                    <p>
+
+                        Analyser la manière dont
+                        les flux et les connexions
+                        se déplacent lorsqu’une partie
+                        du réseau devient indisponible.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="research-application">
+
+                    <span>04</span>
+
+                    <h3>
+                        Finance & risque
+                    </h3>
+
+                    <p>
+
+                        Explorer la propagation
+                        des tensions entre acteurs
+                        et l’évolution des dépendances
+                        en période de crise.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- APPROCHE -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    COMMENT L’ÉTUDIER ?
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Comparer le réseau
+                    avant, pendant et après
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Une approche qui m’intéresse
+                        consiste à reconstruire un réseau
+                        à plusieurs moments dans le temps,
+                        puis à comparer sa structure.
+
+                    </p>
+
+
+                    <p>
+
+                        Cela permettrait de suivre
+                        l’évolution des connexions,
+                        de la centralité des acteurs
+                        ou encore de la concentration
+                        du réseau autour de certains nœuds.
+
+                    </p>
+
+
+                    <p>
+
+                        L’objectif serait ensuite
+                        de relier ces transformations
+                        au choc étudié
+                        et à la capacité du réseau
+                        à s’adapter.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="research-flow">
+
+
+                <div class="research-flow-step">
+
+                    <span>01</span>
+
+                    <strong>
+                        Avant
+                    </strong>
+
+                    <p>
+
+                        Observer la structure initiale
+                        et identifier les acteurs
+                        ou liens importants.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="research-flow-step">
+
+                    <span>02</span>
+
+                    <strong>
+                        Choc
+                    </strong>
+
+                    <p>
+
+                        Identifier la perturbation
+                        et les parties du réseau
+                        directement exposées.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="research-flow-step">
+
+                    <span>03</span>
+
+                    <strong>
+                        Réorganisation
+                    </strong>
+
+                    <p>
+
+                        Mesurer les liens perdus,
+                        créés ou redirigés
+                        après le choc.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="research-flow-step">
+
+                    <span>04</span>
+
+                    <strong>
+                        Résilience
+                    </strong>
+
+                    <p>
+
+                        Étudier la capacité du réseau
+                        à retrouver une structure
+                        ou un fonctionnement stable.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- QUESTION OUVERTE -->
+
+        <section class="econ-section">
+
+
+            <div class="econ-section-title">
+
+                <p>
+                    UNE QUESTION EN ÉVOLUTION
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+
+                <h2>
+
+                    Un axe de recherche
+                    encore ouvert
+
+                </h2>
+
+
+                <div>
+
+
+                    <p>
+
+                        Je développe progressivement
+                        cette réflexion autour
+                        de la dynamique des réseaux
+                        et de leur capacité d’adaptation.
+
+                    </p>
+
+
+                    <p>
+
+                        Le terrain empirique
+                        et les données à utiliser
+                        ne sont pas encore définitivement arrêtés.
+
+                    </p>
+
+
+                    <p>
+
+                        Je souhaite conserver
+                        une approche ouverte,
+                        comparer différentes applications
+                        et identifier celles qui permettent
+                        le mieux d’étudier ces mécanismes.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- CONTACT RECHERCHE -->
+
+        <section class="research-contact">
+
+
+            <div class="research-contact-text">
+
+
+                <p class="research-contact-label">
+                    ÉCHANGE
+                </p>
+
+
+                <h2>
+
+                    Une idée autour
+                    <em>des réseaux économiques ?</em>
+
+                </h2>
+
+
+                <p>
+
+                    Je suis toujours intéressée par les échanges
+                    autour de ces questions,
+                    qu’il s’agisse d’une application,
+                    d’une approche empirique,
+                    d’une référence à lire
+                    ou simplement d’une autre manière
+                    d’aborder la dynamique des réseaux.
+
+                </p>
+
+
+            </div>
+
+
+            <!-- REMPLACE TON-EMAIL PAR TON ADRESSE MAIL -->
+
+            <a
+                href="mailto:TON-EMAIL?subject=Discussion%20autour%20des%20réseaux%20économiques"
+            >
+                Discuter de recherche →
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Économétrie | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================
+           ECONOMETRICS HUB
+        ========================= */
+
+        .econometrics-hub {
+            width: 88%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding-bottom: 120px;
+        }
+
+
+        .econ-hub-hero {
+            padding: 90px 0 80px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .econ-hub-hero h1 {
+            margin: 22px 0 30px;
+
+            max-width: 950px;
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(4rem, 7vw, 7rem);
+
+            line-height: 0.95;
+
+            font-weight: 500;
+
+            color: #f4f7fb;
+        }
+
+
+        .econ-hub-hero h1 em {
+            color: #55b9f3;
+            font-style: normal;
+        }
+
+
+        .econ-hub-intro {
+            max-width: 720px;
+
+            color: #9eb0c2;
+
+            font-size: 1.1rem;
+
+            line-height: 1.8;
+        }
+
+
+
+        /* PROJETS */
+
+        .econ-hub-projects {
+            padding-top: 75px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+
+        .econ-hub-card {
+            min-height: 520px;
+
+            padding: 45px;
+
+            display: flex;
+            flex-direction: column;
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            text-decoration: none;
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+        }
+
+
+        .econ-hub-card:hover {
+            transform: translateY(-6px);
+
+            border-color: rgba(79, 216, 189, 0.5);
+
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+
+        .econ-hub-card-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 70px;
+        }
+
+
+        .econ-hub-card-type {
+            margin: 0;
+
+            color: #55b9f3;
+
+            font-size: 0.76rem;
+
+            letter-spacing: 0.2em;
+        }
+
+
+        .econ-hub-arrow {
+            color: #4fd8bd;
+
+            font-size: 2rem;
+
+            transition: transform 0.3s ease;
+        }
+
+
+        .econ-hub-card:hover .econ-hub-arrow {
+            transform: translate(5px, -5px);
+        }
+
+
+        .econ-hub-card h2 {
+            margin: 0 0 30px;
+
+            max-width: 550px;
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(2.3rem, 4vw, 3.8rem);
+
+            line-height: 1.05;
+
+            font-weight: 500;
+
+            color: #f4f7fb;
+        }
+
+
+        .econ-hub-card h2 em {
+            display: block;
+
+            color: #55b9f3;
+
+            font-style: normal;
+        }
+
+
+        .econ-hub-description {
+            max-width: 560px;
+
+            margin: 0 0 45px;
+
+            color: #9eb0c2;
+
+            line-height: 1.8;
+        }
+
+
+        .econ-hub-tags {
+            margin-top: auto;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+
+        .econ-hub-tags span {
+            padding: 8px 14px;
+
+            border: 1px solid rgba(85, 185, 243, 0.25);
+
+            border-radius: 999px;
+
+            color: #9eb0c2;
+
+            font-size: 0.82rem;
+        }
+
+
+        .econ-hub-result {
+            margin-top: 28px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            color: #d8e1e9;
+
+            line-height: 1.7;
+        }
+
+
+        .econ-hub-result strong {
+            color: #4fd8bd;
+        }
+
+
+
+        @media (max-width: 900px) {
+
+            .econ-hub-projects {
+                grid-template-columns: 1fr;
+            }
+
+
+            .econ-hub-card {
+                min-height: auto;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+                <button
+                    id="projects-button"
+                    class="projects-button nav-active"
+                >
+
+                    Projets
+
+                    <span class="arrow">
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+
+            <span></span>
+
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+
+    <!-- PAGE -->
+
+    <main class="econometrics-hub">
+
+
+        <!-- INTRO -->
+
+        <section class="econ-hub-hero">
+
+            <p class="page-label">
+                ÉCONOMÉTRIE & MODÉLISATION
+            </p>
+
+
+            <h1>
+
+                Comprendre les relations<br>
+
+                <em>derrière les données</em>
+
+            </h1>
+
+
+            <p class="econ-hub-intro">
+
+                J’utilise l’économétrie pour explorer des relations
+                économiques à partir de données réelles,
+                comparer différentes spécifications
+                et comprendre ce qui résiste lorsque l’on contrôle
+                davantage de facteurs.
+
+            </p>
+
+        </section>
+
+
+
+
+        <!-- PROJETS -->
+
+        <section class="econ-hub-projects">
+
+
+
+            <!-- ÉNERGIE -->
+
+            <a
+                href="energy-inflation.html"
+                class="econ-hub-card"
+            >
+
+
+                <div class="econ-hub-card-top">
+
+                    <p class="econ-hub-card-type">
+                        ÉCONOMÉTRIE · PANEL · EUROSTAT
+                    </p>
+
+
+                    <span class="econ-hub-arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+
+                <h2>
+
+                    Énergie & inflation
+
+                    <em>
+                        en Europe
+                    </em>
+
+                </h2>
+
+
+                <p class="econ-hub-description">
+
+                    Dans quelle mesure l’inflation énergétique
+                    est-elle associée à l’inflation hors énergie
+                    dans les pays de l’Union européenne ?
+
+                </p>
+
+
+                <p class="econ-hub-result">
+
+                    <strong>2010 — 2025 · 5 184 observations</strong><br>
+
+                    Régressions, effets fixes pays et temps
+                    et analyse dynamique des retards.
+
+                </p>
+
+
+                <div class="econ-hub-tags">
+
+                    <span>R</span>
+
+                    <span>Panel</span>
+
+                    <span>Fixed Effects</span>
+
+                    <span>Eurostat</span>
+
+                </div>
+
+
+            </a>
+
+
+
+
+            <!-- INTERNET -->
+
+            <a
+                href="internet-wellbeing.html"
+                class="econ-hub-card"
+            >
+
+
+                <div class="econ-hub-card-top">
+
+                    <p class="econ-hub-card-type">
+                        ÉCONOMÉTRIE · PANEL · R
+                    </p>
+
+
+                    <span class="econ-hub-arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+
+                <h2>
+
+                    Internet Access
+
+                    <em>
+                        & Life Satisfaction
+                    </em>
+
+                </h2>
+
+
+                <p class="econ-hub-description">
+
+                    Un meilleur accès à Internet est-il associé
+                    à une satisfaction de vie plus élevée
+                    dans les pays européens ?
+
+                </p>
+
+
+                <p class="econ-hub-result">
+
+                    <strong>2013 — 2023 · 191 observations</strong><br>
+
+                    Nettoyage et fusion des données,
+                    OLS et modèles à effets fixes.
+
+                </p>
+
+
+                <div class="econ-hub-tags">
+
+                    <span>R</span>
+
+                    <span>OLS</span>
+
+                    <span>Panel</span>
+
+                    <span>Fixed Effects</span>
+
+                </div>
+
+
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

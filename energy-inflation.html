@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Économétrie | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+            <div class="projects-menu">
+
+                <button id="projects-button" class="projects-button">
+                    Projets
+                    <span class="arrow">⌄</span>
+                </button>
+
+                <div id="mega-menu" class="mega-menu">
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="cv.html">
+                CV
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+            <span></span>
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- PROJET -->
+
+    <main class="econ-page">
+
+
+        <!-- INTRO -->
+
+        <section class="econ-hero">
+
+            <p class="page-label">
+                ÉCONOMÉTRIE · DONNÉES DE PANEL
+            </p>
+
+            <h1>
+                Énergie et inflation<br>
+                <em>en Europe</em>
+            </h1>
+
+            <p class="econ-question">
+                Quand les prix de l’énergie augmentent,
+                est-ce que les autres prix augmentent aussi ?
+            </p>
+
+
+            <div class="econ-meta">
+
+                <div>
+                    <span>PÉRIODE</span>
+                    <strong>2010 — 2025</strong>
+                </div>
+
+                <div>
+                    <span>PAYS</span>
+                    <strong>27 pays de l’UE</strong>
+                </div>
+
+                <div>
+                    <span>OBSERVATIONS</span>
+                    <strong>5 184</strong>
+                </div>
+
+                <div>
+                    <span>DONNÉES & OUTIL</span>
+                    <strong>Eurostat · R</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUESTION -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+                <p>LA QUESTION</p>
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Quand l’énergie devient plus chère,
+                    est-ce que le reste suit ?
+                </h2>
+
+
+                <div>
+
+                    <p>
+                        Une hausse des prix de l’énergie ne touche pas seulement
+                        directement les ménages. Elle peut aussi augmenter
+                        les coûts des entreprises : produire, transporter,
+                        chauffer ou stocker devient plus cher.
+                    </p>
+
+                    <p>
+                        L’idée de ce projet est donc simple :
+                        regarder si les périodes de forte inflation énergétique
+                        sont également associées à une hausse des prix des
+                        autres biens et services.
+                    </p>
+
+                    <p>
+                        Pour éviter une relation mécanique,
+                        l’analyse se concentre surtout sur
+                        <strong>l’inflation hors énergie</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVOLUTION -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+                <p>QUE S’EST-IL PASSÉ ?</p>
+            </div>
+
+
+            <div class="econ-visual">
+
+                <div class="econ-visual-text">
+
+                    <h2>
+                        L’énergie réagit beaucoup plus fortement
+                    </h2>
+
+                    <p>
+                        Les prix de l’énergie connaissent des variations
+                        beaucoup plus brutales que l’inflation générale.
+                    </p>
+
+                    <p>
+                        Le phénomène est particulièrement visible autour de
+                        2021–2023 : l’inflation énergétique augmente très
+                        fortement avant de redescendre rapidement.
+                    </p>
+
+                    <p>
+                        Première intuition :
+                        les deux inflations semblent souvent évoluer
+                        dans le même sens, mais pas avec la même intensité.
+                    </p>
+
+                </div>
+
+
+                <img
+                    src="assets/econometrics/inflation_evolution.png"
+                    alt="Évolution de l'inflation énergétique et totale"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- RELATION -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+                <p>EST-CE QUE LES DEUX SONT LIÉES ?</p>
+            </div>
+
+
+            <div class="econ-visual">
+
+                <div class="econ-visual-text">
+
+                    <h2>
+                        Oui, elles ont tendance à augmenter ensemble
+                    </h2>
+
+                    <p>
+                        Chaque point du graphique représente un mois,
+                        calculé à partir de la moyenne des 27 pays
+                        de l’Union européenne.
+                    </p>
+
+                    <p>
+                        La tendance est croissante :
+                        lorsque l’inflation de l’énergie est plus élevée,
+                        l’inflation hors énergie a elle aussi tendance
+                        à être plus élevée.
+                    </p>
+
+                    <p>
+                        On observe donc une
+                        <strong>relation positive</strong>.
+                        Mais une relation ne signifie pas automatiquement
+                        que l’énergie est la cause de la hausse des autres prix.
+                    </p>
+
+                </div>
+
+
+                <img
+                    src="assets/econometrics/relation_inflation.png"
+                    alt="Relation entre inflation énergétique et inflation hors énergie"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ANALYSE -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+                <p>EST-CE VRAIMENT L’ÉNERGIE QUI EXPLIQUE CE LIEN ?</p>
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Une partie du lien vient aussi
+                    d’autres facteurs
+                </h2>
+
+
+                <div>
+
+                    <p>
+                        Au premier regard, le résultat est clair :
+                        quand l’inflation énergétique augmente de
+                        <strong>1 point</strong>,
+                        l’inflation hors énergie est associée à une hausse
+                        d’environ <strong>+0,084 point</strong>.
+                    </p>
+
+                    <p>
+                        Mais les pays européens ne sont pas identiques.
+                        Ils peuvent aussi subir les mêmes événements
+                        au même moment.
+                    </p>
+
+                    <p>
+                        J’ai donc refait l’analyse en tenant compte
+                        des différences entre pays et des grands événements
+                        qui touchent plusieurs pays à une même période.
+                    </p>
+
+                    <p>
+                        Le lien reste positif,
+                        mais il tombe à environ
+                        <strong>+0,030 point</strong>.
+                    </p>
+
+                    <p>
+                        Cela signifie qu’une partie importante du lien
+                        observé au départ vient aussi de facteurs plus larges
+                        que l’énergie seule.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="econ-table">
+
+                <div class="econ-table-row econ-table-head">
+                    <span>Analyse</span>
+                    <span>Lien estimé</span>
+                    <span>p-value</span>
+                    <span>R²</span>
+                </div>
+
+                <div class="econ-table-row">
+                    <strong>Relation brute</strong>
+                    <span>+0,084</span>
+                    <span>&lt; 0,001</span>
+                    <span>0,148</span>
+                </div>
+
+                <div class="econ-table-row">
+                    <strong>Différences entre pays prises en compte</strong>
+                    <span>+0,084</span>
+                    <span>&lt; 0,001</span>
+                    <span>0,246</span>
+                </div>
+
+                <div class="econ-table-row econ-table-highlight">
+                    <strong>Pays + événements communs pris en compte</strong>
+                    <span>+0,030</span>
+                    <span>&lt; 0,001</span>
+                    <span>0,798</span>
+                </div>
+
+            </div>
+
+
+            <p class="econ-highlight-text">
+                <strong>En clair :</strong>
+                l’énergie est bien liée à l’évolution des autres prix,
+                mais le lien devient beaucoup plus faible lorsque l’on tient
+                compte de ce qui se passe autour.
+                Une partie de la hausse des prix semble donc venir
+                de facteurs plus larges que l’énergie seule.
+            </p>
+
+        </section>
+
+
+        <!-- RETARDS -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+                <p>EST-CE QUE L’EFFET DURE ?</p>
+            </div>
+
+
+            <div class="econ-visual">
+
+                <div class="econ-visual-text">
+
+                    <h2>
+                        Pas vraiment :
+                        le lien est surtout immédiat
+                    </h2>
+
+                    <p>
+                        J’ai ensuite regardé si une hausse de l’inflation
+                        énergétique pouvait encore être liée aux autres prix
+                        plusieurs mois plus tard.
+                    </p>
+
+                    <p>
+                        Lorsque les différents retards sont étudiés ensemble,
+                        la relation positive apparaît surtout
+                        <strong>le même mois</strong>.
+                    </p>
+
+                    <p>
+                        Entre 1 et 5 mois plus tard,
+                        les résultats ne sont plus statistiquement significatifs.
+                    </p>
+
+                    <p>
+                        On ne trouve donc pas de transmission positive claire
+                        qui continuerait progressivement pendant plusieurs mois.
+                    </p>
+
+                </div>
+
+
+                <img
+                    src="assets/econometrics/transmission_retards.png"
+                    alt="Effet de l'inflation énergétique selon le délai"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSION -->
+
+        <section class="econ-conclusion">
+
+            <p class="page-label">
+                ALORS, EST-CE QUE L’ÉNERGIE CAUSE L’INFLATION ?
+            </p>
+
+
+            <h2>
+                Le lien est clair,
+                <em>la causalité ne l’est pas</em>
+            </h2>
+
+
+            <p>
+                <strong>Ce que les données montrent :</strong>
+                lorsque l’inflation énergétique est plus élevée,
+                l’inflation hors énergie tend également à être plus élevée.
+                Cette relation reste présente même lorsque l’on tient compte
+                d’autres différences et événements.
+            </p>
+
+            <p>
+                <strong>
+                    Mais cela ne suffit pas pour dire que l’énergie
+                    cause directement l’inflation.
+                </strong>
+                D’autres facteurs peuvent faire augmenter en même temps
+                les prix de l’énergie et les autres prix :
+                tensions sur l’offre, situation internationale,
+                coûts de transport ou autres chocs économiques.
+            </p>
+
+            <p>
+                Le résultat principal est donc simple :
+                <strong>
+                    l’énergie est liée aux mouvements de l’inflation,
+                    mais elle n’en est pas l’unique explication.
+                </strong>
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

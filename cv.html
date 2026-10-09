@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CV | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Logos outils -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    >
+
+
+    <style>
+
+        /* =========================
+           CV PAGE
+        ========================= */
+
+        .cv-page {
+            width: 88%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 80px 0 120px;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .cv-intro-section {
+            padding-bottom: 65px;
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.1);
+        }
+
+
+        .cv-intro-section h1 {
+            margin: 22px 0 28px;
+
+            max-width: 950px;
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(3.8rem, 7vw, 6.8rem);
+
+            line-height: 0.98;
+
+            font-weight: 500;
+
+            color: #f4f7fb;
+        }
+
+
+        .cv-intro-section h1 em {
+            color: #55b9f3;
+            font-style: normal;
+        }
+
+
+        .cv-intro-text {
+            max-width: 760px;
+
+            color: #9eb0c2;
+
+            font-size: 1.05rem;
+
+            line-height: 1.8;
+        }
+
+
+        .cv-actions {
+            margin-top: 35px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .cv-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 15px 22px;
+
+            border:
+                1px solid rgba(79,216,189,0.55);
+
+            color: #f4f7fb;
+
+            text-decoration: none;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .cv-button:hover {
+            background: #4fd8bd;
+            color: #07121d;
+
+            transform: translateY(-2px);
+        }
+
+
+        .cv-button-secondary {
+            border-color:
+                rgba(255,255,255,0.15);
+        }
+
+
+        .cv-button-secondary:hover {
+            background:
+                rgba(255,255,255,0.07);
+
+            color: #f4f7fb;
+        }
+
+
+
+        /* =========================
+           GRID
+        ========================= */
+
+        .cv-content {
+            padding-top: 70px;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.6fr)
+                minmax(320px, 0.8fr);
+
+            gap: 65px;
+        }
+
+
+
+        /* =========================
+           LEFT
+        ========================= */
+
+        .cv-main {
+            display: flex;
+            flex-direction: column;
+
+            gap: 80px;
+        }
+
+
+        .cv-section-title {
+            margin-bottom: 40px;
+        }
+
+
+        .cv-section-title p {
+            margin: 0 0 12px;
+
+            color: #4fd8bd;
+
+            font-size: 0.72rem;
+
+            letter-spacing: 0.18em;
+        }
+
+
+        .cv-section-title h2 {
+            margin: 0;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: clamp(2rem, 4vw, 3.5rem);
+
+            font-weight: 500;
+        }
+
+
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .cv-timeline {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .cv-timeline-item {
+            display: grid;
+
+            grid-template-columns:
+                130px 1fr;
+
+            gap: 35px;
+
+            padding: 30px 0;
+
+            border-top:
+                1px solid rgba(255,255,255,0.1);
+        }
+
+
+        .cv-timeline-item:last-child {
+            border-bottom:
+                1px solid rgba(255,255,255,0.1);
+        }
+
+
+        .cv-year {
+            color: #4fd8bd;
+
+            font-size: 0.8rem;
+
+            letter-spacing: 0.1em;
+        }
+
+
+        .cv-timeline-content h3 {
+            margin: 0 0 8px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: 1.45rem;
+
+            font-weight: 500;
+        }
+
+
+        .cv-place {
+            margin: 0 0 16px;
+
+            color: #55b9f3;
+
+            font-size: 0.92rem;
+        }
+
+
+        .cv-timeline-content p {
+            margin: 0 0 8px;
+
+            color: #9eb0c2;
+
+            line-height: 1.75;
+        }
+
+
+        .cv-detail {
+            margin-top: 15px !important;
+
+            padding-left: 18px;
+
+            border-left: 1px solid rgba(79,216,189,0.35);
+        }
+
+
+        .cv-detail strong {
+            color: #dfe9f2;
+        }
+
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .cv-projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .cv-project {
+            padding: 28px;
+
+            border:
+                1px solid rgba(255,255,255,0.1);
+        }
+
+
+        .cv-project span {
+            display: block;
+
+            margin-bottom: 18px;
+
+            color: #4fd8bd;
+
+            font-size: 0.7rem;
+
+            letter-spacing: 0.16em;
+        }
+
+
+        .cv-project h3 {
+            margin: 0 0 14px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: 1.45rem;
+
+            font-weight: 500;
+        }
+
+
+        .cv-project p {
+            margin: 0;
+
+            color: #9eb0c2;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* =========================
+           RIGHT COLUMN
+        ========================= */
+
+        .cv-sidebar {
+            display: flex;
+            flex-direction: column;
+
+            gap: 22px;
+        }
+
+
+        .cv-side-card {
+            padding: 28px;
+
+            border:
+                1px solid rgba(255,255,255,0.1);
+        }
+
+
+        .cv-side-label {
+            margin: 0 0 15px;
+
+            color: #4fd8bd;
+
+            font-size: 0.7rem;
+
+            letter-spacing: 0.17em;
+        }
+
+
+        .cv-side-card h3 {
+            margin: 0 0 25px;
+
+            color: #f4f7fb;
+
+            font-family: Georgia, serif;
+
+            font-size: 1.55rem;
+
+            font-weight: 500;
+        }
+
+
+
+        /* =========================
+           LANGUES
+        ========================= */
+
+        .cv-language {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 14px 0;
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.08);
+        }
+
+
+        .cv-language:last-child {
+            border-bottom: none;
+        }
+
+
+        .cv-language-name {
+            color: #f4f7fb;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .cv-flag {
+            font-size: 1.35rem;
+        }
+
+
+        .cv-language-level {
+            color: #55b9f3;
+
+            font-size: 0.9rem;
+        }
+
+
+
+        /* =========================
+           SOFTWARE
+        ========================= */
+
+        .cv-tools {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .cv-tool {
+            padding: 16px 12px;
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #dfe8f1;
+        }
+
+
+        .cv-tool i {
+            font-size: 1.6rem;
+
+            color: #55b9f3;
+        }
+
+
+        .cv-tool-text-icon {
+            width: 28px;
+
+            color: #55b9f3;
+
+            font-weight: 600;
+
+            font-size: 0.85rem;
+
+            text-align: center;
+        }
+
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .cv-skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+
+        .cv-skills span {
+            padding: 8px 12px;
+
+            border:
+                1px solid rgba(85,185,243,0.22);
+
+            border-radius: 999px;
+
+            color: #9eb0c2;
+
+            font-size: 0.8rem;
+        }
+
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .cv-email {
+            color: #4fd8bd;
+
+            text-decoration: none;
+
+            word-break: break-word;
+        }
+
+
+        .cv-email:hover {
+            text-decoration: underline;
+        }
+
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .cv-content {
+                grid-template-columns: 1fr;
+            }
+
+
+            .cv-sidebar {
+                display: grid;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .cv-timeline-item {
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+            }
+
+
+            .cv-projects {
+                grid-template-columns: 1fr;
+            }
+
+
+            .cv-sidebar {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+                <button
+                    id="projects-button"
+                    class="projects-button"
+                >
+                    Projets
+
+                    <span class="arrow">
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="cv.html"
+                class="nav-active"
+            >
+                CV
+            </a>
+
+
+            <a href="mailto:noraelbya@icloud.com">
+                Contact
+            </a>
+
+        </nav>
+
+
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+            <span></span>
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+
+    <!-- ================= PAGE ================= -->
+
+    <main class="cv-page">
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section class="cv-intro-section">
+
+            <p class="page-label">
+                CURRICULUM VITAE
+            </p>
+
+
+            <h1>
+
+                Économétrie, data<br>
+
+                <em>& modélisation</em>
+
+            </h1>
+
+
+            <p class="cv-intro-text">
+
+                Étudiante en Master 2 Économétrie & Statistiques,
+                je développe un profil quantitatif autour
+                de l’analyse de données, de la modélisation,
+                du machine learning et des séries temporelles.
+
+            </p>
+
+
+            <div class="cv-actions">
+
+                <a
+                    href="assets/cv/cv-opportunites.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cv-button"
+                >
+                    Voir le CV
+                    <span>↗</span>
+                </a>
+
+
+                <a
+                    href="assets/cv/cv-opportunites.pdf"
+                    download="Nora_EL_BYA_CV.pdf"
+                    class="cv-button cv-button-secondary"
+                >
+                    Télécharger le CV
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="cv-content">
+
+
+            <!-- LEFT -->
+
+            <div class="cv-main">
+
+
+                <!-- FORMATION -->
+
+                <section>
+
+
+                    <div class="cv-section-title">
+
+                        <p>
+                            FORMATION
+                        </p>
+
+                        <h2>
+                            Parcours académique
+                        </h2>
+
+                    </div>
+
+
+
+                    <div class="cv-timeline">
+
+
+                        <!-- M2 -->
+
+                        <div class="cv-timeline-item">
+
+                            <div class="cv-year">
+                                2026 — 2027
+                            </div>
+
+
+                            <div class="cv-timeline-content">
+
+                                <h3>
+                                    Master 2 Économétrie & Statistiques
+                                </h3>
+
+
+                                <p class="cv-place">
+                                    Aix-Marseille Université
+                                </p>
+
+
+                                <p>
+
+                                    Parcours recherche avec des enseignements
+                                    en machine learning, séries temporelles,
+                                    méthodes non paramétriques
+                                    et processus stochastiques.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- M1 -->
+
+                        <div class="cv-timeline-item">
+
+                            <div class="cv-year">
+                                2025 — 2026
+                            </div>
+
+
+                            <div class="cv-timeline-content">
+
+                                <h3>
+                                    Master 1 Économétrie & Statistiques
+                                </h3>
+
+
+                                <p class="cv-place">
+                                    Aix-Marseille Université
+                                </p>
+
+
+                                <p>
+
+                                    Formation en économétrie,
+                                    statistiques, programmation
+                                    et analyse quantitative.
+
+                                </p>
+
+
+                                <p class="cv-detail">
+
+                                    <strong>🇬🇧 University of Kent</strong><br>
+
+                                    Échange universitaire de six mois
+                                    au Royaume-Uni avec notamment
+                                    Financial Technology
+                                    et International Finance.
+
+                                </p>
+
+
+                                <p class="cv-detail">
+
+                                    <strong>🇪🇸 Universidad Autónoma de Madrid</strong><br>
+
+                                    Semaine de recherche consacrée
+                                    à l’analyse de réseaux appliquée
+                                    à l’économie :
+                                    connectivité, centralité,
+                                    diffusion et propagation
+                                    de chocs dans les réseaux.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- L3 -->
+
+                        <div class="cv-timeline-item">
+
+                            <div class="cv-year">
+                                2024 — 2025
+                            </div>
+
+
+                            <div class="cv-timeline-content">
+
+                                <h3>
+                                    Licence 3 Économie — Mention Bien
+                                </h3>
+
+
+                                <p class="cv-place">
+                                    Université Paris 1 Panthéon-Sorbonne
+                                </p>
+
+
+                                <p>
+
+                                    Économie, statistiques,
+                                    mathématiques, macroéconomie
+                                    et microéconomie.
+
+                                </p>
+
+
+                                <p class="cv-detail">
+
+                                    <strong>🇹🇷 Université Galatasaray — Istanbul</strong><br>
+
+                                    Échange universitaire avec
+                                    des enseignements en statistiques,
+                                    économétrie, programmation
+                                    et économie du développement.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PREPA -->
+
+                        <div class="cv-timeline-item">
+
+                            <div class="cv-year">
+                                2022 — 2024
+                            </div>
+
+
+                            <div class="cv-timeline-content">
+
+                                <h3>
+                                    Classe préparatoire ECG
+                                </h3>
+
+
+                                <p class="cv-place">
+                                    Lycée Jean-Baptiste Corot
+                                </p>
+
+
+                                <p>
+
+                                    Mathématiques appliquées,
+                                    économie, informatique
+                                    et langues.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+
+                <!-- PROJETS -->
+
+                <section>
+
+
+                    <div class="cv-section-title">
+
+                        <p>
+                            PROJETS
+                        </p>
+
+                        <h2>
+                            Quelques analyses
+                        </h2>
+
+                    </div>
+
+
+                    <div class="cv-projects">
+
+
+                        <div class="cv-project">
+
+                            <span>
+                                ÉCONOMÉTRIE
+                            </span>
+
+                            <h3>
+                                Énergie & inflation en Europe
+                            </h3>
+
+                            <p>
+
+                                Analyse de la relation
+                                entre inflation énergétique
+                                et inflation hors énergie
+                                dans l’Union européenne.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="cv-project">
+
+                            <span>
+                                ÉCONOMÉTRIE · R
+                            </span>
+
+                            <h3>
+                                Internet Access & Life Satisfaction
+                            </h3>
+
+                            <p>
+
+                                Analyse économétrique de données européennes
+                                avec nettoyage, fusion,
+                                OLS et effets fixes.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="cv-project">
+
+                            <span>
+                                MACHINE LEARNING · PYTHON
+                            </span>
+
+                            <h3>
+                                Conformal Prediction
+                            </h3>
+
+                            <p>
+
+                                Comparaison d’une régression linéaire
+                                et d’un Random Forest
+                                avec plusieurs méthodes
+                                de Conformal Prediction.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <div class="cv-project">
+
+                            <span>
+                                RECHERCHE
+                            </span>
+
+                            <h3>
+                                Réseaux & propagation des chocs
+                            </h3>
+
+                            <p>
+
+                                Exploration de la dynamique
+                                des réseaux économiques
+                                et de leur réorganisation
+                                après une perturbation.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+
+
+            <!-- ================= SIDEBAR ================= -->
+
+            <aside class="cv-sidebar">
+
+
+                <!-- CONTACT -->
+
+                <div class="cv-side-card">
+
+                    <p class="cv-side-label">
+                        CONTACT
+                    </p>
+
+                    <h3>
+                        Me contacter
+                    </h3>
+
+
+                    <a
+                        href="mailto:noraelbya@icloud.com"
+                        class="cv-email"
+                    >
+                        noraelbya@icloud.com
+                    </a>
+
+                </div>
+
+
+
+                <!-- LANGUES -->
+
+                <div class="cv-side-card">
+
+                    <p class="cv-side-label">
+                        LANGUES
+                    </p>
+
+                    <h3>
+                        Langues
+                    </h3>
+
+
+                    <div class="cv-language">
+
+                        <div class="cv-language-name">
+
+                            <span class="cv-flag">
+                                🇫🇷
+                            </span>
+
+                            Français
+
+                        </div>
+
+                        <span class="cv-language-level">
+                            Natif
+                        </span>
+
+                    </div>
+
+
+                    <div class="cv-language">
+
+                        <div class="cv-language-name">
+
+                            <span class="cv-flag">
+                                🇬🇧
+                            </span>
+
+                            Anglais
+
+                        </div>
+
+                        <span class="cv-language-level">
+                            C1
+                        </span>
+
+                    </div>
+
+
+                    <div class="cv-language">
+
+                        <div class="cv-language-name">
+
+                            <span class="cv-flag">
+                                🇩🇪
+                            </span>
+
+                            Allemand
+
+                        </div>
+
+                        <span class="cv-language-level">
+                            B2
+                        </span>
+
+                    </div>
+
+
+                    <div class="cv-language">
+
+                        <div class="cv-language-name">
+
+                            <span class="cv-flag">
+                                🇪🇸
+                            </span>
+
+                            Espagnol
+
+                        </div>
+
+                        <span class="cv-language-level">
+                            B1
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- OUTILS -->
+
+                <div class="cv-side-card">
+
+                    <p class="cv-side-label">
+                        OUTILS
+                    </p>
+
+                    <h3>
+                        Outils & programmation
+                    </h3>
+
+
+                    <div class="cv-tools">
+
+
+                        <div class="cv-tool">
+
+                            <i class="devicon-python-plain"></i>
+
+                            <span>
+                                Python
+                            </span>
+
+                        </div>
+
+
+                        <div class="cv-tool">
+
+                            <i class="devicon-r-plain"></i>
+
+                            <span>
+                                R
+                            </span>
+
+                        </div>
+
+
+                        <div class="cv-tool">
+
+                            <i class="devicon-azuresqldatabase-plain"></i>
+
+                            <span>
+                                SQL
+                            </span>
+
+                        </div>
+
+
+                        <div class="cv-tool">
+
+                            <i class="devicon-jupyter-plain"></i>
+
+                            <span>
+                                Jupyter
+                            </span>
+
+                        </div>
+
+
+                        <div class="cv-tool">
+
+                            <i class="devicon-vscode-plain"></i>
+
+                            <span>
+                                VS Code
+                            </span>
+
+                        </div>
+
+
+                        <div class="cv-tool">
+
+                            <span class="cv-tool-text-icon">
+                                XL
+                            </span>
+
+                            <span>
+                                Excel
+                            </span>
+
+                        </div>
+
+
+                        <div class="cv-tool">
+
+                            <span class="cv-tool-text-icon">
+                                BI
+                            </span>
+
+                            <span>
+                                Power BI
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COMPÉTENCES -->
+
+                <div class="cv-side-card">
+
+                    <p class="cv-side-label">
+                        COMPÉTENCES
+                    </p>
+
+
+                    <h3>
+                        Analyse quantitative
+                    </h3>
+
+
+                    <div class="cv-skills">
+
+                        <span>
+                            Économétrie
+                        </span>
+
+                        <span>
+                            Statistiques
+                        </span>
+
+                        <span>
+                            Machine Learning
+                        </span>
+
+                        <span>
+                            Séries temporelles
+                        </span>
+
+                        <span>
+                            Données de panel
+                        </span>
+
+                        <span>
+                            Effets fixes
+                        </span>
+
+                        <span>
+                            Analyse de réseaux
+                        </span>
+
+                        <span>
+                            Data visualisation
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

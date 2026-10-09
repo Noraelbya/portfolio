@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Machine Learning | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--
+        Même largeur que la page économétrie,
+        sans utiliser la classe econ-page.
+    -->
+    <style>
+        .ml-page {
+            width: 88%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+                <button
+                    id="projects-button"
+                    class="projects-button"
+                >
+                    Projets
+                    <span class="arrow">⌄</span>
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+            <span></span>
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- PAGE MACHINE LEARNING -->
+
+    <main class="ml-page">
+
+
+        <!-- INTRO -->
+
+        <section class="econ-hero">
+
+            <p class="page-label">
+                MACHINE LEARNING · UCI · PYTHON
+            </p>
+
+
+            <h1>
+                Comparer les modèles,<br>
+                <em>pour mieux choisir</em>
+            </h1>
+
+
+            <p class="econ-question">
+
+                Quel modèle et quelle méthode d’incertitude offrent
+                le meilleur compromis entre précision,
+                fiabilité et coût de calcul ?
+
+            </p>
+
+
+            <div class="econ-meta">
+
+                <div>
+
+                    <span>DONNÉES</span>
+
+                    <strong>
+                        Abalone · UCI
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>OBSERVATIONS</span>
+
+                    <strong>
+                        4 177
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>MODÈLES</span>
+
+                    <strong>
+                        Linear Regression · Random Forest
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>STATUT</span>
+
+                    <strong>
+                        Projet en cours
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OBJECTIF -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    L’OBJECTIF
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Comparer des prédictions,
+                    pas seulement des algorithmes
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        L’objectif de ce projet est de comparer plusieurs
+                        méthodes de prédiction sur un même problème,
+                        afin de comprendre ce qui permet réellement
+                        de choisir une approche plutôt qu’une autre.
+
+                    </p>
+
+
+                    <p>
+
+                        La comparaison ne repose pas uniquement sur
+                        la précision moyenne des modèles.
+                        Je cherche également à mesurer
+                        <strong>l’incertitude autour des prédictions</strong>
+                        et à identifier les méthodes qui donnent
+                        des intervalles à la fois fiables et suffisamment précis.
+
+                    </p>
+
+
+                    <p>
+
+                        Cette approche permet de dépasser la simple question
+                        « quel modèle obtient le meilleur score ? »
+                        pour regarder aussi
+                        <strong>la fiabilité et le coût de la méthode utilisée</strong>.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DONNÉES -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    LES DONNÉES
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Pourquoi utiliser
+                    les données Abalone ?
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        J’ai utilisé le jeu de données
+                        <strong>Abalone</strong> de l’UCI Machine Learning Repository,
+                        composé de 4 177 observations.
+
+                    </p>
+
+
+                    <p>
+
+                        Chaque observation décrit un abalone à partir
+                        de plusieurs caractéristiques physiques :
+                        longueur, diamètre, hauteur,
+                        différents poids et sexe.
+
+                    </p>
+
+
+                    <p>
+
+                        La variable à prédire est
+                        <strong>Rings</strong>, le nombre d’anneaux,
+                        utilisé comme indicateur de l’âge de l’animal.
+
+                    </p>
+
+
+                    <p>
+
+                        Ce jeu de données est particulièrement adapté
+                        à une comparaison de méthodes :
+                        il s’agit d’un problème de régression,
+                        avec plusieurs variables explicatives,
+                        une variable catégorielle et suffisamment
+                        d’observations pour séparer proprement
+                        entraînement, calibration et test.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PRÉPARATION -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    PRÉPARATION DES DONNÉES
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Séparer apprentissage,
+                    calibration et évaluation
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        La variable catégorielle correspondant au sexe
+                        a d’abord été transformée afin de pouvoir être
+                        utilisée par les modèles.
+
+                    </p>
+
+
+                    <p>
+
+                        Les données ont ensuite été séparées en trois ensembles :
+                        <strong>2 505 observations pour l’entraînement</strong>,
+                        <strong>836 pour la calibration</strong>
+                        et <strong>836 pour le test</strong>.
+
+                    </p>
+
+
+                    <p>
+
+                        Cette séparation permet de garder les données de test
+                        complètement à l’écart de l’apprentissage
+                        et d’utiliser un ensemble spécifique pour construire
+                        les intervalles de prédiction lorsque la méthode
+                        le nécessite.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MODÈLES -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    PREMIÈRE COMPARAISON
+                </p>
+
+            </div>
+
+
+            <div class="econ-visual">
+
+
+                <div class="econ-visual-text">
+
+                    <h2>
+                        Un modèle plus complexe
+                        n’est pas forcément meilleur
+                    </h2>
+
+
+                    <p>
+
+                        J’ai commencé par comparer deux approches :
+                        une <strong>régression linéaire</strong>
+                        et un <strong>Random Forest</strong>.
+
+                    </p>
+
+
+                    <p>
+
+                        Le Random Forest est plus flexible
+                        et peut représenter des relations non linéaires.
+                        Pourtant, sur ces données,
+                        cette complexité supplémentaire n’améliore pas
+                        automatiquement la prédiction.
+
+                    </p>
+
+
+                    <p>
+
+                        La régression linéaire obtient ici
+                        un <strong>R² de 0,54</strong>,
+                        contre <strong>0,52</strong>
+                        pour le Random Forest.
+
+                    </p>
+
+
+                    <p>
+
+                        Les deux modèles suivent relativement bien
+                        la tendance générale,
+                        mais leurs prédictions deviennent moins précises
+                        pour les observations ayant un nombre
+                        d’anneaux particulièrement élevé.
+
+                    </p>
+
+                </div>
+
+
+                <img
+                    src="assets/machine-learning/comparaison_predictions.png"
+                    alt="Comparaison des valeurs réelles avec les prédictions de la régression linéaire et du Random Forest"
+                >
+
+            </div>
+
+
+
+            <div class="econ-table">
+
+                <div class="econ-table-row econ-table-head">
+
+                    <span>Modèle</span>
+                    <span>RMSE</span>
+                    <span>R²</span>
+                    <span>Lecture</span>
+
+                </div>
+
+
+                <div class="econ-table-row econ-table-highlight">
+
+                    <strong>
+                        Régression linéaire
+                    </strong>
+
+                    <span>
+                        2,23
+                    </span>
+
+                    <span>
+                        0,54
+                    </span>
+
+                    <span>
+                        Meilleure précision
+                    </span>
+
+                </div>
+
+
+                <div class="econ-table-row">
+
+                    <strong>
+                        Random Forest
+                    </strong>
+
+                    <span>
+                        2,27
+                    </span>
+
+                    <span>
+                        0,52
+                    </span>
+
+                    <span>
+                        Résultat très proche
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="econ-highlight-text">
+
+                <strong>Premier enseignement :</strong>
+                choisir un modèle plus complexe n’améliore pas forcément
+                la qualité des prédictions.
+                Sur ce jeu de données, la régression linéaire
+                reste légèrement plus performante.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- INCERTITUDE -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    AU-DELÀ DE LA PRÉDICTION
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Une valeur prédite ne suffit pas
+                    toujours pour décider
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        Une prédiction ponctuelle donne une seule valeur,
+                        mais elle ne dit pas directement
+                        à quel point cette estimation est incertaine.
+
+                    </p>
+
+
+                    <p>
+
+                        J’ai donc complété la comparaison
+                        avec plusieurs méthodes de
+                        <strong>Conformal Prediction</strong>,
+                        qui permettent d’associer
+                        un intervalle à chaque prédiction.
+
+                    </p>
+
+
+                    <p>
+
+                        L’objectif fixé est une couverture d’environ
+                        <strong>90 %</strong> :
+                        l’intervalle doit contenir la vraie valeur
+                        dans environ 90 % des cas.
+
+                    </p>
+
+
+                    <p>
+
+                        Mais atteindre 90 % ne suffit pas.
+                        Un intervalle extrêmement large serait fiable,
+                        mais peu utile.
+                        Je cherche donc parmi les méthodes fiables
+                        celles qui donnent
+                        <strong>les intervalles les plus étroits</strong>.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MÉTHODES CONFORMAL -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    COMPARAISON DES MÉTHODES
+                </p>
+
+            </div>
+
+
+            <div class="econ-visual">
+
+
+                <div class="econ-visual-text">
+
+                    <h2>
+                        Fiabilité d’abord,
+                        précision ensuite
+                    </h2>
+
+
+                    <p>
+
+                        Plusieurs approches ont été comparées :
+                        <strong>Split Conformal</strong>,
+                        <strong>Jackknife</strong>,
+                        <strong>Jackknife+</strong>
+                        et <strong>CV Conformal</strong>.
+
+                    </p>
+
+
+                    <p>
+
+                        Pour sélectionner une méthode,
+                        j’utilise deux critères.
+                        Elle doit d’abord atteindre
+                        la couverture cible de 90 %,
+                        puis produire l’intervalle moyen
+                        le plus étroit possible.
+
+                    </p>
+
+
+                    <p>
+
+                        Avec la régression linéaire,
+                        <strong>Jackknife+</strong>
+                        offre actuellement le meilleur compromis :
+                        environ <strong>90,2 % de couverture</strong>
+                        pour une largeur moyenne d’environ
+                        <strong>6,78</strong>.
+
+                    </p>
+
+
+                    <p>
+
+                        Le <strong>Random Forest avec CV Conformal</strong>
+                        donne un résultat très proche,
+                        avec environ 90,3 % de couverture
+                        et une largeur moyenne de 6,80.
+
+                    </p>
+
+                </div>
+
+
+                <img
+                    src="assets/machine-learning/comparaison_methodes.png"
+                    alt="Comparaison des méthodes de Conformal Prediction selon leur couverture et la largeur des intervalles"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TABLEAU -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    RÉSULTATS INTERMÉDIAIRES
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Toutes les méthodes
+                    ne donnent pas le même compromis
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        Les résultats montrent que plusieurs méthodes
+                        atteignent une couverture proche de la cible,
+                        mais avec des intervalles plus ou moins larges.
+
+                    </p>
+
+
+                    <p>
+
+                        Le Split Conformal appliqué au Random Forest,
+                        par exemple, reste légèrement sous la cible
+                        de 90 %.
+
+                    </p>
+
+
+                    <p>
+
+                        À l’inverse,
+                        Jackknife+ avec la régression linéaire
+                        combine une couverture suffisante
+                        avec l’intervalle moyen le plus étroit
+                        parmi les méthodes actuellement comparées.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="econ-table">
+
+                <div class="econ-table-row econ-table-head">
+
+                    <span>Méthode</span>
+                    <span>Modèle</span>
+                    <span>Couverture</span>
+                    <span>Largeur</span>
+
+                </div>
+
+
+                <div class="econ-table-row">
+
+                    <strong>
+                        Split CP
+                    </strong>
+
+                    <span>
+                        Linéaire
+                    </span>
+
+                    <span>
+                        90,6 %
+                    </span>
+
+                    <span>
+                        6,98
+                    </span>
+
+                </div>
+
+
+                <div class="econ-table-row">
+
+                    <strong>
+                        Jackknife
+                    </strong>
+
+                    <span>
+                        Linéaire
+                    </span>
+
+                    <span>
+                        90,2 %
+                    </span>
+
+                    <span>
+                        6,80
+                    </span>
+
+                </div>
+
+
+                <div class="econ-table-row econ-table-highlight">
+
+                    <strong>
+                        Jackknife+
+                    </strong>
+
+                    <span>
+                        Linéaire
+                    </span>
+
+                    <span>
+                        90,2 %
+                    </span>
+
+                    <span>
+                        6,78
+                    </span>
+
+                </div>
+
+
+                <div class="econ-table-row">
+
+                    <strong>
+                        CV Conformal
+                    </strong>
+
+                    <span>
+                        Linéaire
+                    </span>
+
+                    <span>
+                        90,2 %
+                    </span>
+
+                    <span>
+                        6,82
+                    </span>
+
+                </div>
+
+
+                <div class="econ-table-row">
+
+                    <strong>
+                        Split CP
+                    </strong>
+
+                    <span>
+                        Random Forest
+                    </span>
+
+                    <span>
+                        89,4 %
+                    </span>
+
+                    <span>
+                        6,96
+                    </span>
+
+                </div>
+
+
+                <div class="econ-table-row">
+
+                    <strong>
+                        CV Conformal
+                    </strong>
+
+                    <span>
+                        Random Forest
+                    </span>
+
+                    <span>
+                        90,3 %
+                    </span>
+
+                    <span>
+                        6,80
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- COÛT DE CALCUL -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    UNE AUTRE CONTRAINTE : LE CALCUL
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    La meilleure méthode doit aussi
+                    être réalisable
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        La comparaison ne se limite pas
+                        aux performances statistiques.
+
+                    </p>
+
+
+                    <p>
+
+                        Certaines méthodes comme le Jackknife
+                        nécessitent de réentraîner le modèle
+                        un grand nombre de fois.
+
+                    </p>
+
+
+                    <p>
+
+                        Avec une régression linéaire,
+                        ce coût reste raisonnable.
+                        Avec un Random Forest,
+                        la même procédure devient
+                        beaucoup plus lourde à calculer.
+
+                    </p>
+
+
+                    <p>
+
+                        Le Jackknife avec Random Forest
+                        n’a donc pas été retenu
+                        dans la comparaison finale actuelle.
+                        Cette contrainte fait partie du choix :
+                        une méthode doit être
+                        <strong>précise, fiable mais aussi exploitable</strong>.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STATUT -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    PROJET EN COURS
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    La comparaison peut encore
+                    être approfondie
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        Les principaux modèles et plusieurs méthodes
+                        de Conformal Prediction ont déjà été comparés.
+
+                    </p>
+
+
+                    <p>
+
+                        Les résultats actuels permettent d’identifier
+                        les premiers compromis entre précision,
+                        couverture et coût de calcul.
+
+                    </p>
+
+
+                    <p>
+
+                        Le projet reste néanmoins ouvert :
+                        certaines méthodes plus coûteuses
+                        peuvent encore être optimisées ou approfondies,
+                        et la robustesse des conclusions
+                        peut être étudiée sur d’autres configurations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CONCLUSION -->
+
+        <section class="econ-conclusion">
+
+            <p class="page-label">
+                CE QUE J’EN RETIENS
+            </p>
+
+
+            <h2>
+
+                Le meilleur modèle n’est pas forcément
+                <em>le plus complexe</em>
+
+            </h2>
+
+
+            <p>
+
+                Sur les données Abalone,
+                la régression linéaire obtient des performances
+                légèrement meilleures que le Random Forest,
+                malgré sa structure beaucoup plus simple.
+
+            </p>
+
+
+            <p>
+
+                L’ajout du Conformal Prediction montre également
+                qu’un bon choix ne dépend pas d’un seul indicateur :
+                il faut regarder simultanément
+                la précision des prédictions,
+                la couverture des intervalles,
+                leur largeur et le coût de calcul.
+
+            </p>
+
+
+            <p>
+
+                Parmi les méthodes testées jusqu’ici,
+                la combinaison
+                <strong>régression linéaire + Jackknife+</strong>
+                offre le compromis le plus intéressant
+                entre fiabilité et précision des intervalles.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Internet & bien-être | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .internet-page {
+            width: 88%;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+        .internet-graphs {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        .internet-graphs img {
+            width: 100%;
+            display: block;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 900px) {
+
+            .internet-graphs {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+                <button
+                    id="projects-button"
+                    class="projects-button"
+                >
+                    Projets
+                    <span class="arrow">⌄</span>
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+                    </div>
+
+
+                    <div class="menu-column">
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="language-switch">
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+            <span></span>
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- PAGE -->
+
+    <main class="internet-page">
+
+
+        <!-- INTRO -->
+
+        <section class="econ-hero">
+
+            <p class="page-label">
+                ÉCONOMÉTRIE · DONNÉES DE PANEL · R
+            </p>
+
+
+            <h1>
+                Internet Access<br>
+                <em>& Life Satisfaction</em>
+            </h1>
+
+
+            <p class="econ-question">
+
+                Un meilleur accès à Internet est-il associé
+                à une satisfaction de vie plus élevée
+                dans les pays européens ?
+
+            </p>
+
+
+            <div class="econ-meta">
+
+                <div>
+
+                    <span>PÉRIODE</span>
+
+                    <strong>
+                        2013 — 2023
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>UNITÉ</span>
+
+                    <strong>
+                        Pays · année
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>OBSERVATIONS</span>
+
+                    <strong>
+                        191
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>DONNÉES & OUTIL</span>
+
+                    <strong>
+                        Eurostat · R
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- QUESTION -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    LA QUESTION
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    La connectivité numérique
+                    va-t-elle de pair avec le bien-être ?
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        Internet facilite l’accès à l’information,
+                        à l’éducation, au travail et aux interactions sociales.
+                        Il peut donc contribuer au bien-être,
+                        mais cet effet n’est pas évident à mesurer.
+
+                    </p>
+
+
+                    <p>
+
+                        Dans les pays européens, l’accès à Internet
+                        est déjà très répandu. L’objectif est donc de voir
+                        si les différences de connectivité qui subsistent
+                        sont encore associées à des différences
+                        de satisfaction de vie.
+
+                    </p>
+
+
+                    <p>
+
+                        L’analyse porte sur deux indicateurs Eurostat :
+                        la part des ménages disposant d’un accès à Internet
+                        et la satisfaction de vie moyenne,
+                        mesurée sur une échelle de 0 à 10.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DONNÉES -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    PRÉPARATION DES DONNÉES
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Deux bases réunies
+                    au niveau pays-année
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        J’ai d’abord nettoyé séparément les données
+                        d’accès à Internet et de satisfaction de vie :
+                        sélection des variables utiles,
+                        suppression des agrégats et traitement
+                        des valeurs manquantes.
+
+                    </p>
+
+
+                    <p>
+
+                        Les deux bases ont ensuite été fusionnées
+                        à partir du <strong>pays</strong> et de
+                        <strong>l’année</strong>.
+
+                    </p>
+
+
+                    <p>
+
+                        Le jeu de données final contient
+                        <strong>191 observations pays-année</strong>.
+                        Sur l’ensemble de l’échantillon,
+                        l’accès moyen à Internet est d’environ
+                        <strong>88,7 %</strong> et la satisfaction
+                        de vie moyenne de <strong>7,1 sur 10</strong>.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ÉVOLUTION -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    ÉVOLUTION
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Une Europe de plus
+                    en plus connectée
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        L’accès moyen à Internet augmente nettement
+                        au cours de la période et atteint des niveaux
+                        très élevés dans la plupart des pays européens.
+
+                    </p>
+
+
+                    <p>
+
+                        La satisfaction de vie évolue beaucoup moins
+                        fortement. Les deux variables ne suivent donc
+                        pas mécaniquement la même trajectoire.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="internet-graphs">
+
+                <img
+                    src="assets/internet-wellbeing/internet_evolution.png"
+                    alt="Évolution moyenne de l'accès à Internet"
+                >
+
+
+                <img
+                    src="assets/internet-wellbeing/lifesat_evolution.png"
+                    alt="Évolution moyenne de la satisfaction de vie"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RELATION -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    RELATION
+                </p>
+
+            </div>
+
+
+            <div class="econ-visual">
+
+
+                <div class="econ-visual-text">
+
+                    <h2>
+                        Une association positive
+                        apparaît entre les pays
+                    </h2>
+
+
+                    <p>
+
+                        Lorsque les valeurs sont moyennées par pays,
+                        les pays où l’accès à Internet est plus élevé
+                        tendent aussi à présenter une satisfaction
+                        de vie plus élevée.
+
+                    </p>
+
+
+                    <p>
+
+                        La tendance est positive,
+                        mais les observations restent dispersées :
+                        la connectivité ne suffit donc pas
+                        à expliquer à elle seule les différences
+                        de bien-être entre pays.
+
+                    </p>
+
+
+                    <p>
+
+                        Lorsque l’analyse porte uniquement sur
+                        les variations au sein d’un même pays
+                        dans le temps, la relation devient
+                        beaucoup plus faible.
+
+                    </p>
+
+                </div>
+
+
+                <img
+                    src="assets/internet-wellbeing/internet_lifesat_relation.png"
+                    alt="Relation entre accès à Internet et satisfaction de vie"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MODÈLES -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    MODÈLES
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    La relation reste-t-elle
+                    après contrôle ?
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        J’ai comparé trois spécifications :
+                        une régression OLS simple,
+                        puis un modèle avec effets fixes pays,
+                        et enfin un modèle avec effets fixes
+                        pays et année.
+
+                    </p>
+
+
+                    <p>
+
+                        L’objectif est de vérifier si la relation
+                        positive observée reste présente lorsqu’on
+                        tient compte des caractéristiques propres
+                        à chaque pays et des événements communs
+                        à certaines années.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="econ-table">
+
+                <div class="econ-table-row econ-table-head">
+
+                    <span>Modèle</span>
+                    <span>Coefficient</span>
+                    <span>Erreur std.</span>
+                    <span>R²</span>
+
+                </div>
+
+
+                <div class="econ-table-row">
+
+                    <strong>
+                        OLS simple
+                    </strong>
+
+                    <span>
+                        0,038
+                    </span>
+
+                    <span>
+                        0,004
+                    </span>
+
+                    <span>
+                        0,284
+                    </span>
+
+                </div>
+
+
+                <div class="econ-table-row">
+
+                    <strong>
+                        Effets fixes pays
+                    </strong>
+
+                    <span>
+                        0,018
+                    </span>
+
+                    <span>
+                        0,002
+                    </span>
+
+                    <span>
+                        0,915
+                    </span>
+
+                </div>
+
+
+                <div class="econ-table-row econ-table-highlight">
+
+                    <strong>
+                        Pays + année
+                    </strong>
+
+                    <span>
+                        0,027
+                    </span>
+
+                    <span>
+                        0,004
+                    </span>
+
+                    <span>
+                        0,924
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p class="econ-highlight-text">
+
+                <strong>Lecture :</strong>
+                dans le modèle avec effets fixes pays et année,
+                +1 point de pourcentage d’accès à Internet
+                est associé à environ +0,027 point
+                de satisfaction de vie.
+                La relation reste positive,
+                mais elle ne constitue pas une preuve de causalité.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- INTERPRÉTATION -->
+
+        <section class="econ-section">
+
+            <div class="econ-section-title">
+
+                <p>
+                    INTERPRÉTATION
+                </p>
+
+            </div>
+
+
+            <div class="econ-columns">
+
+                <h2>
+                    Une relation positive,
+                    mais à interpréter avec prudence
+                </h2>
+
+
+                <div>
+
+                    <p>
+
+                        Les trois modèles montrent une association
+                        positive entre accès à Internet
+                        et satisfaction de vie.
+
+                    </p>
+
+
+                    <p>
+
+                        Cependant, une partie de la relation initiale
+                        s’explique par les différences structurelles
+                        entre les pays et par des facteurs communs
+                        dans le temps.
+
+                    </p>
+
+
+                    <p>
+
+                        Le R² très élevé des modèles à effets fixes
+                        ne signifie pas qu’Internet explique à lui seul
+                        plus de 90 % du bien-être :
+                        une grande partie de ce pouvoir explicatif
+                        vient précisément des effets fixes ajoutés
+                        au modèle.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CONCLUSION -->
+
+        <section class="econ-conclusion">
+
+            <p class="page-label">
+                CE QUE J’EN RETIENS
+            </p>
+
+
+            <h2>
+
+                Plus connecté,
+                <em>pas forcément plus heureux</em>
+
+            </h2>
+
+
+            <p>
+
+                L’accès à Internet est positivement associé
+                à la satisfaction de vie dans les pays européens,
+                y compris lorsque les différences entre pays
+                et les effets liés aux années sont pris en compte.
+
+            </p>
+
+
+            <p>
+
+                Mais dans une Europe déjà très connectée,
+                le niveau d’accès ne suffit pas à expliquer
+                les écarts de bien-être.
+                D’autres dimensions économiques, sociales
+                et institutionnelles jouent probablement
+                un rôle important.
+
+            </p>
+
+
+            <p>
+
+                L’analyse met donc en évidence
+                une <strong>association</strong>,
+                et non un effet causal de l’accès à Internet
+                sur la satisfaction de vie.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

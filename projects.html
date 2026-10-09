@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projets | Nora EL BYA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* Deux projets dans la carte économétrie */
+
+        .econometrics-project-links {
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .econometrics-project-links a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 14px 0;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.12);
+
+            color: #f4f7fb;
+
+            text-decoration: none;
+
+            font-size: 0.95rem;
+
+            transition:
+                color 0.25s ease,
+                padding-left 0.25s ease;
+        }
+
+        .econometrics-project-links a:last-child {
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .econometrics-project-links a:hover {
+            color: #4fd8bd;
+            padding-left: 7px;
+        }
+
+        .econometrics-project-links a span:last-child {
+            color: #4fd8bd;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="main-header">
+
+        <a href="index.html" class="logo">
+            Nora EL BYA
+        </a>
+
+
+        <nav class="main-nav">
+
+
+            <a href="about.html">
+                À propos
+            </a>
+
+
+            <div class="projects-menu">
+
+
+                <button
+                    id="projects-button"
+                    class="projects-button nav-active"
+                >
+
+                    Projets
+
+                    <span class="arrow">
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="mega-menu"
+                    class="mega-menu"
+                >
+
+
+                    <div class="menu-column">
+
+
+                        <p class="menu-title">
+                            Analyse & modélisation
+                        </p>
+
+
+                        <a href="econometrics.html">
+                            Économétrie
+                        </a>
+
+
+                        <a href="time-series.html">
+                            Séries temporelles
+                        </a>
+
+
+                        <a href="machine-learning.html">
+                            Machine Learning
+                        </a>
+
+
+                    </div>
+
+
+
+                    <div class="menu-column">
+
+
+                        <p class="menu-title">
+                            Applications & recherche
+                        </p>
+
+
+                        <a href="data-products.html">
+                            Data Products
+                        </a>
+
+
+                        <a href="research.html">
+                            Recherche & réseaux
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <a href="cv.html">
+                CV
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+
+        </nav>
+
+
+
+        <div class="language-switch">
+
+
+            <button
+                class="language active"
+                id="fr-button"
+            >
+                FR
+            </button>
+
+
+            <span></span>
+
+
+            <button
+                class="language"
+                id="en-button"
+            >
+                EN
+            </button>
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+    <!-- ================= PROJECTS ================= -->
+
+
+    <main class="projects-page">
+
+
+        <!-- INTRO -->
+
+
+        <section class="projects-intro">
+
+
+            <p class="page-label">
+                PROJETS
+            </p>
+
+
+            <h1>
+
+                Des méthodes aux<br>
+
+                <em>
+                    questions concrètes
+                </em>
+
+            </h1>
+
+
+            <p class="projects-intro-text">
+
+                Économétrie, séries temporelles, machine learning
+                ou recherche : je rassemble ici les analyses,
+                méthodes et projets que je développe au fil de mon parcours.
+
+            </p>
+
+
+        </section>
+
+
+
+
+        <!-- ================= CATÉGORIES ================= -->
+
+
+        <section class="projects-categories">
+
+
+
+
+            <!-- ================= MODÉLISATION ================= -->
+
+
+            <div class="project-category">
+
+
+                <div class="project-category-top">
+
+
+                    <span class="project-number">
+                        01
+                    </span>
+
+
+                    <span class="project-arrow">
+                        ↗
+                    </span>
+
+
+                </div>
+
+
+
+                <p class="project-type">
+                    MODÉLISATION
+                </p>
+
+
+
+                <h2>
+
+                    Économétrie &<br>
+
+                    séries temporelles
+
+                </h2>
+
+
+
+                <p class="project-description">
+
+                    Modéliser des relations économiques,
+                    tester des hypothèses et comprendre
+                    l’évolution des données dans le temps.
+
+                </p>
+
+
+
+                <!-- LES DEUX PROJETS -->
+
+
+                <div class="econometrics-project-links">
+
+
+                    <a href="econometrics.html">
+
+                        <span>
+                            Énergie & inflation en Europe
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <a href="internet-wellbeing.html">
+
+                        <span>
+                            Internet Access & Life Satisfaction
+                        </span>
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="project-tags">
+
+                    <span>OLS</span>
+
+                    <span>Panel</span>
+
+                    <span>Time Series</span>
+
+                    <span>R</span>
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- ================= MACHINE LEARNING ================= -->
+
+
+            <a
+                href="machine-learning.html"
+                class="project-category"
+            >
+
+
+                <div class="project-category-top">
+
+
+                    <span class="project-number">
+                        02
+                    </span>
+
+
+                    <span class="project-arrow">
+                        ↗
+                    </span>
+
+
+                </div>
+
+
+
+                <p class="project-type">
+                    MACHINE LEARNING
+                </p>
+
+
+
+                <h2>
+
+                    Prédiction &<br>
+
+                    méthodes
+
+                </h2>
+
+
+
+                <p class="project-description">
+
+                    Comparer des modèles, mesurer leurs performances
+                    et développer des approches prédictives
+                    adaptées aux données.
+
+                </p>
+
+
+
+                <div class="project-tags">
+
+                    <span>Python</span>
+
+                    <span>Random Forest</span>
+
+                    <span>Conformal Prediction</span>
+
+                </div>
+
+
+            </a>
+
+
+
+
+            <!-- ================= DATA PRODUCTS ================= -->
+
+
+            <a
+                href="data-products.html"
+                class="project-category"
+            >
+
+
+                <div class="project-category-top">
+
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+
+                    <span class="project-arrow">
+                        ↗
+                    </span>
+
+
+                </div>
+
+
+
+                <p class="project-type">
+                    DATA PRODUCTS
+                </p>
+
+
+
+                <h2>
+
+                    De la donnée<br>
+
+                    à l’action
+
+                </h2>
+
+
+
+                <p class="project-description">
+
+                    Transformer des données brutes en analyses
+                    claires, visualisations et outils réellement
+                    utiles à la décision.
+
+                </p>
+
+
+
+                <div class="project-tags">
+
+                    <span>Data Analysis</span>
+
+                    <span>Visualisation</span>
+
+                    <span>Decision Support</span>
+
+                </div>
+
+
+            </a>
+
+
+
+
+            <!-- ================= RECHERCHE ================= -->
+
+
+            <a
+                href="research.html"
+                class="project-category"
+            >
+
+
+                <div class="project-category-top">
+
+
+                    <span class="project-number">
+                        04
+                    </span>
+
+
+                    <span class="project-arrow">
+                        ↗
+                    </span>
+
+
+                </div>
+
+
+
+                <p class="project-type">
+                    RECHERCHE & RÉSEAUX
+                </p>
+
+
+
+                <h2>
+
+                    Questions que<br>
+
+                    j’explore
+
+                </h2>
+
+
+
+                <p class="project-description">
+
+                    Comprendre comment des réseaux économiques
+                    réagissent à des chocs et comment leurs structures
+                    évoluent dans le temps.
+
+                </p>
+
+
+
+                <div class="project-tags">
+
+                    <span>Networks</span>
+
+                    <span>Shocks</span>
+
+                    <span>Resilience</span>
+
+                </div>
+
+
+            </a>
+
+
+        </section>
+
+
+
+
+        <!-- ================= PROJET À DÉCOUVRIR ================= -->
+
+
+        <section class="featured-project">
+
+
+            <div class="featured-project-label">
+
+                <span></span>
+
+                PROJET À DÉCOUVRIR
+
+            </div>
+
+
+
+            <div class="featured-project-content">
+
+
+                <div>
+
+
+                    <p class="featured-category">
+                        ÉCONOMÉTRIE
+                    </p>
+
+
+                    <h2>
+
+                        Énergie & inflation<br>
+
+                        en Europe
+
+                    </h2>
+
+
+                </div>
+
+
+
+                <div class="featured-project-text">
+
+
+                    <p>
+
+                        Une analyse économétrique visant à étudier
+                        la relation entre inflation énergétique
+                        et inflation hors énergie dans l’Union européenne.
+
+                    </p>
+
+
+                    <p>
+
+                        Données de panel, effets fixes,
+                        analyse dynamique et comparaison
+                        de plusieurs spécifications.
+
+                    </p>
+
+
+                    <a href="econometrics.html">
+
+                        Découvrir le projet
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+
+</html>
