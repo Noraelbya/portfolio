@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,8 +9,15 @@
     <title>À propos | Nora EL BYA</title>
 
     <link rel="stylesheet" href="style.css">
-</head>
 
+    <style>
+        @media (min-width: 901px) {
+            .interest-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
 
 <body>
 
@@ -21,34 +29,25 @@
             Nora EL BYA
         </a>
 
-
         <nav class="main-nav">
 
             <a href="about.html" class="nav-active">
                 À propos
             </a>
 
-
             <div class="projects-menu">
 
-                <button
-                    id="projects-button"
-                    class="projects-button"
-                >
+                <button id="projects-button" class="projects-button">
                     Projets
                     <span class="arrow">⌄</span>
                 </button>
 
-
-                <div
-                    id="mega-menu"
-                    class="mega-menu"
-                >
+                <div id="mega-menu" class="mega-menu">
 
                     <div class="menu-column">
 
                         <p class="menu-title">
-                            Analyse & modélisation
+                            Analyse et modélisation
                         </p>
 
                         <a href="econometrics.html">
@@ -65,11 +64,10 @@
 
                     </div>
 
-
                     <div class="menu-column">
 
                         <p class="menu-title">
-                            Applications & recherche
+                            Applications et recherche
                         </p>
 
                         <a href="data-products.html">
@@ -77,7 +75,7 @@
                         </a>
 
                         <a href="research.html">
-                            Recherche & réseaux
+                            Recherche et réseaux
                         </a>
 
                     </div>
@@ -86,33 +84,20 @@
 
             </div>
 
-
-            <a href="cv.html">
-                CV
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
 
         </nav>
 
-
         <div class="language-switch">
 
-            <button
-                class="language active"
-                id="fr-button"
-            >
+            <button class="language active" id="fr-button">
                 FR
             </button>
 
             <span></span>
 
-            <button
-                class="language"
-                id="en-button"
-            >
+            <button class="language" id="en-button">
                 EN
             </button>
 
@@ -121,11 +106,9 @@
     </header>
 
 
-
     <!-- ================= ABOUT ================= -->
 
     <main class="about-page">
-
 
         <!-- ================= INTRO ================= -->
 
@@ -135,33 +118,34 @@
                 À PROPOS
             </p>
 
-
             <h1>
                 Des chiffres, oui.<br>
                 Mais surtout<br>
                 <em>ce qu’ils racontent</em>
             </h1>
 
-
             <div class="about-text">
 
                 <p>
-                    J’aime transformer des données parfois abstraites
-                    en analyses concrètes et compréhensibles.
+                    Ce que j'aime dans la data, c'est pouvoir
+                    partir d'une question, chercher les données
+                    nécessaires et essayer d'y apporter une
+                    réponse à travers l'analyse statistique.
                 </p>
 
-
                 <p>
-                    Mon parcours en économie me pousse à aller au-delà
-                    des chiffres : comprendre les mécanismes qu’ils révèlent,
-                    pourquoi ils évoluent et comment ils peuvent réellement
-                    éclairer une décision.
+                    En Master 2 Économétrie et Statistiques,
+                    parcours recherche, je développe mes
+                    compétences en économétrie, Machine Learning
+                    et programmation avec Python et R.
+                    J'aime autant construire des modèles que
+                    comprendre leurs résultats, leurs limites
+                    et ce qu'ils peuvent réellement nous apprendre.
                 </p>
 
             </div>
 
         </section>
-
 
 
         <!-- ================= CE QUE J'EXPLORE ================= -->
@@ -169,89 +153,64 @@
         <section class="about-explore">
 
             <div class="explore-heading">
-
                 <span></span>
-
-                <p>
-                    CE QUE J’EXPLORE EN CE MOMENT
-                </p>
-
+                <p>CE QUE J’EXPLORE EN CE MOMENT</p>
             </div>
-
 
             <div class="explore-grid">
 
-
-                <!-- 01 -->
-
                 <article class="explore-item">
 
-                    <p class="explore-number">
-                        01
-                    </p>
+                    <p class="explore-number">01</p>
 
-                    <h2>
-                        Réseaux & chocs
-                    </h2>
+                    <h2>Réseaux et chocs</h2>
 
                     <p>
-                        Je m’intéresse à la manière dont les réseaux
-                        économiques évoluent et se réorganisent après
-                        un choc, avec l’envie d’approfondir ce sujet
-                        dans mes futurs travaux de recherche.
+                        Dans le cadre de mon mémoire de recherche,
+                        je m'intéresse à la manière dont les réseaux
+                        évoluent après un choc : quels liens
+                        disparaissent, lesquels se créent et
+                        comment les acteurs s'adaptent
+                        à ces changements.
                     </p>
 
                 </article>
 
-
-
-                <!-- 02 -->
-
                 <article class="explore-item">
 
-                    <p class="explore-number">
-                        02
-                    </p>
+                    <p class="explore-number">02</p>
 
-                    <h2>
-                        Data & décision
-                    </h2>
+                    <h2>Data et décision</h2>
 
                     <p>
-                        Aller au-delà du simple reporting pour construire
-                        des analyses et des outils qui permettent réellement
-                        de comprendre, comparer et décider.
+                        Rechercher des données, construire mes
+                        propres bases, tester différentes méthodes
+                        et transformer les résultats en analyses
+                        utiles pour comprendre une situation
+                        ou prendre une décision.
                     </p>
 
                 </article>
 
-
-
-                <!-- 03 -->
-
                 <article class="explore-item">
 
-                    <p class="explore-number">
-                        03
-                    </p>
+                    <p class="explore-number">03</p>
 
-                    <h2>
-                        Économie appliquée
-                    </h2>
+                    <h2>Économétrie et causalité</h2>
 
                     <p>
-                        Utiliser l’économétrie, les statistiques et le
-                        machine learning pour étudier des phénomènes
-                        économiques concrets et donner du sens aux résultats.
+                        Comprendre les relations entre les
+                        variables, distinguer corrélation et
+                        causalité et utiliser les méthodes
+                        économétriques pour étudier des
+                        phénomènes économiques concrets.
                     </p>
 
                 </article>
-
 
             </div>
 
         </section>
-
 
 
         <!-- ================= DOMAINES D'INTÉRÊT ================= -->
@@ -259,115 +218,69 @@
         <section class="interest-section">
 
             <div class="explore-heading">
-
                 <span></span>
-
-                <p>
-                    DOMAINES QUI M’INTÉRESSENT
-                </p>
-
+                <p>DOMAINES QUI M’INTÉRESSENT</p>
             </div>
 
-
             <p class="interest-intro">
-                Des terrains d’application que j’aimerais progressivement
-                intégrer à mes projets et travaux de recherche
+                Des domaines que j'aimerais explorer davantage
+                à travers mes projets et mes travaux de recherche.
             </p>
-
 
             <div class="interest-grid">
 
-
-                <!-- ÉNERGIE -->
+                <!-- ÉCONOMIE DU SPORT -->
 
                 <article class="interest-item">
 
-                    <span class="interest-index">
-                        01
-                    </span>
+                    <span class="interest-index">01</span>
 
-                    <h2>
-                        Énergie
-                    </h2>
+                    <h2>Économie du sport</h2>
 
                     <p>
-                        Marchés, prix, transition énergétique
-                        et propagation des chocs
+                        Football, marché des transferts,
+                        économie des clubs et réseaux de joueurs.
                     </p>
 
                 </article>
-
 
 
                 <!-- FINANCE -->
 
                 <article class="interest-item">
 
-                    <span class="interest-index">
-                        02
-                    </span>
+                    <span class="interest-index">02</span>
 
-                    <h2>
-                        Finance & risque
-                    </h2>
+                    <h2>Finance et risques</h2>
 
                     <p>
-                        Volatilité, interdépendances,
-                        corrélations et périodes de crise
+                        Volatilité, interdépendances et propagation
+                        des chocs en période de crise.
                     </p>
 
                 </article>
 
 
-
-                <!-- TRANSPORT -->
+                <!-- ÉNERGIE -->
 
                 <article class="interest-item">
 
-                    <span class="interest-index">
-                        03
-                    </span>
+                    <span class="interest-index">03</span>
 
-                    <h2>
-                        Transport
-                    </h2>
+                    <h2>Énergie</h2>
 
                     <p>
-                        Réseaux, mobilité, résilience
-                        et effets des perturbations
+                        Marchés énergétiques, évolution des prix
+                        et transmission des chocs économiques.
                     </p>
 
                 </article>
-
-
-
-                <!-- SUPPLY CHAIN -->
-
-                <article class="interest-item">
-
-                    <span class="interest-index">
-                        04
-                    </span>
-
-                    <h2>
-                        Supply chain
-                    </h2>
-
-                    <p>
-                        Propagation des chocs, dépendances
-                        et réorganisation des chaînes de production
-                    </p>
-
-                </article>
-
 
             </div>
 
         </section>
 
-
     </main>
-
 
     <script src="script.js"></script>
 
